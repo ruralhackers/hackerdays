@@ -1,0 +1,30 @@
+---
+---
+
+<header id="header" class="fixed w-full z-50 transition-all duration-300">
+  <div class="container mx-auto px-4 md:px-6 py-5 md:py-6">
+    <nav class="flex items-center justify-between">
+      <a href="/" class="flex items-center space-x-3">
+        <span class="text-2xl md:text-3xl font-bold text-earth-900">Hacker Days</span>
+        <span class="text-xl md:text-2xl text-primary-600">2025</span>
+      </a>
+    </nav>
+  </div>
+</header>
+
+<script>
+  // Handle header background change on scroll
+  const header = document.getElementById('header');
+  
+  function updateHeaderBackground() {
+    if (window.scrollY > 50) {
+      header.classList.add('bg-white', 'shadow-md');
+    } else {
+      header.classList.remove('bg-white', 'shadow-md');
+    }
+  }
+  
+  // Initial call and event listener
+  updateHeaderBackground();
+  window.addEventListener('scroll', updateHeaderBackground);
+</script>
