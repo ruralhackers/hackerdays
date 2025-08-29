@@ -1,0 +1,218 @@
+{
+  "meta": {
+    "title": "Hacker Days - Prototyping the future of rural areas, in community",
+    "description": "One week. One real challenge. One change for many villages. Hacker Days is an initiative to prototype the future of rural areas, in community."
+  },
+  "nav": {
+    "inicio": "Home",
+    "porQue": "Why?",
+    "reto": "The Challenge",
+    "participantes": "Participants",
+    "programa": "Program",
+    "impacto": "Impact",
+    "logistica": "Logistics",
+    "apoyo": "Support",
+    "impulsan": "Supporters",
+    "sobre": "About",
+    "contacto": "Contact"
+  },
+  "hero": {
+    "date": "September 1-7, 2025 • Anceu, Galicia",
+    "title": "Hacker Days: prototyping the future of rural areas, in community.",
+    "subtitle": "One week to contribute your talent and solve a real challenge that can improve the lives of more than 1500 villages."
+  },
+  "why": {
+    "title": "Why was Hacker Days born?",
+    "intro1": "Sometimes in rural areas, projects take time to reach the end. But when we come together, something changes.",
+    "intro2": "Hacker Days was born with the idea of solving real challenges in just one week, demonstrating that by each person contributing a little, we can build solutions that help an entire community.",
+    "story": "Each edition will address a new challenge that emerges from the village, from its protagonists.",
+    "storyHighlight": "This year, the challenge comes from Rosabel and Olga, two women over 60 who have been managing their village's community water system for years.",
+    "imageAlt": "Olga and Rosabel, caretakers of Anceu's community water"
+  },
+  "challenge": {
+    "title": "The 2025 Challenge: Automate collective water management",
+    "subtitle": "What if we could improve the lives of people who take care of your village's water?",
+    "description1": "Rosabel and Olga are two neighbors from the village of Anceu. They are in charge of water management. We don't have a distribution company. They are part of the Anceu Water Community board. They read 400 water meters a year, house by house every 3 months. They detect leaks, organize billing, do follow-up.",
+    "question": "What will happen when they are no longer here?",
+    "description2": "Today, we pay €80 a year thanks to their selfless work. If community management is lost, the price will go up again for all people in the village.",
+    "highlight": "What if we create an open source solution replicable in 1500 villages that facilitates continuing this collective water management system?",
+    "goals": {
+      "title": "We want:",
+      "items": [
+        "For village people to have a better quality of life.",
+        "For the village to maintain collective water management.",
+        "For you to come help us design it."
+      ]
+    },
+    "imageAlt": "Village women managing a community resource",
+    "imageCaption": "Olga and Rosabel, caretakers of Anceu village's community water"
+  },
+  "participants": {
+    "title": "Who are we looking for?",
+    "subtitle": "We need diverse talent to address this challenge from different perspectives.",
+    "subtitle2": "If you identify with any of these profiles, we want to count on you!",
+    "deadline": "Registrations open until July 7th",
+    "cta": "I want to contribute my talent",
+    "profiles": [
+      {
+        "title": "Engineering",
+        "description": "To design and implement a web with authentication, resource management, and notifications."
+      },
+      {
+        "title": "Design",
+        "description": "To show the complex in a simple way and create intuitive interfaces for people with different digital levels."
+      },
+      {
+        "title": "UX/UI",
+        "description": "To improve the user experience and ensure the solution is accessible for all age ranges."
+      },
+      {
+        "title": "Communication",
+        "description": "To document what we do and replicate the model in the 1500 villages that manage water communally."
+      },
+      {
+        "title": "Digitalization",
+        "description": "To teach those who will use it and facilitate generational change in collective water management."
+      },
+      {
+        "title": "Mediation",
+        "description": "To listen, understand and connect with rural reality and the needs derived from collective water management."
+      }
+    ]
+  },
+  "program": {
+    "title": "The program - One week to change many things",
+    "subtitle": "From September 1 to 7, 2025, we will live an intense week of collaboration, learning and creation in Anceu, Galicia.",
+    "days": [
+      {
+        "day": "Days 1-2",
+        "title": "Immersion in the village",
+        "description": "We will meet Olga and Rosabel to thoroughly understand the water management needs. We will map current processes and define objectives."
+      },
+      {
+        "day": "Days 3-4",
+        "title": "Design and prototype creation",
+        "description": "We will work in multidisciplinary teams to design and begin building a solution that is simple, robust and adapted to real needs."
+      },
+      {
+        "day": "Days 5-6",
+        "title": "Testing, improvements and testing",
+        "description": "We will test the prototype with the village, collect feedback and make improvements to ensure the solution is viable and useful."
+      },
+      {
+        "day": "Day 7",
+        "title": "Celebration and presentation",
+        "description": "We will celebrate the week's achievements and present the prototype to other water communities, sharing learning and expanding impact. The prototype will remain operational in Anceu for validation."
+      }
+    ]
+  },
+  "impact": {
+    "title": "What changes if you participate or support?",
+    "subtitle": "One week of your talent can mean years of autonomy and community for many people.",
+    "impacts": [
+      {
+        "title": "Changes the lives of Rosabel and Olga",
+        "description": "We facilitate their essential work and ensure their effort has continuity."
+      },
+      {
+        "title": "Changes the future of 1500 villages",
+        "description": "A replicable solution that can help hundreds of communities with the same challenge."
+      },
+      {
+        "title": "Changes your way of understanding the rural",
+        "description": "A transformative experience that will connect you with life in the village."
+      }
+    ]
+  },
+  "logistics": {
+    "title": "Hacker Days Logistics",
+    "items": [
+      {
+        "title": "Free participation",
+        "description": "Participation in Hacker Days is completely free."
+      },
+      {
+        "title": "Accommodation included",
+        "description": "The stay will be at Anceu Coliving, a shared space for 14 people, surrounded by nature and designed for collaboration."
+      },
+      {
+        "title": "Meals included",
+        "description": "Meals are included throughout the week."
+      },
+      {
+        "title": "Transport",
+        "description": "Transport to Anceu is not covered, each participant must manage it on their own."
+      },
+      {
+        "title": "Work spaces",
+        "description": "The challenge will be developed between Anceu Coliving and the Casa del Pueblo Vecinal, connecting the spaces of life, creation and community."
+      }
+    ],
+    "imageAlt": "Water mural in Anceu"
+  },
+  "support": {
+    "title": "How can you support?",
+    "subtitle": "There are multiple ways to participate and contribute to making Hacker Days have the greatest possible impact. Find the one that best suits you.",
+    "options": [
+      {
+        "title": "Collaborating company",
+        "description": "Provide funding or materials to make the event and prototype development possible.",
+        "benefits": [
+          "Resources for technical materials",
+          "Logistical and transport support",
+          "Visibility as an entity committed to rural areas"
+        ],
+        "cta": "I want to collaborate as a company",
+        "ctaUrl": "https://www.canva.com/design/DAGlj4KffGE/daN1zwB4ZRTaf4B3qjCVfA/edit?utm_content=DAGlj4KffGE&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"
+      },
+      {
+        "title": "Dissemination",
+        "description": "Help us tell this project and reach more people who can contribute.",
+        "benefits": [
+          "Share on your social networks",
+          "Tell people who might be interested",
+          "Help us contact media outlets"
+        ]
+      },
+      {
+        "title": "Get involved",
+        "description": "Be part of the work team during Hackers Days in Anceu.",
+        "benefits": [
+          "Actively participate in design and development",
+          "Meet Olga, Rosabel and rural reality",
+          "Be part of a project with real impact"
+        ],
+        "cta": "I want to participate in the team",
+        "ctaUrl": "https://forms.gle/Lbr7PqUZTvsRwe8J6"
+      }
+    ]
+  },
+  "impulsan": {
+    "title": "Supporters",
+    "subtitle": "Companies and organizations committed to the future of the rural environment.",
+    "hackerDays": "Companies that support Hacker Days",
+    "ruralHackers": "Companies that have already trusted Rural Hackers",
+    "cta": {
+      "text": "Does your company also want to drive rural transformation?",
+      "button": "I want to support Hacker Days"
+    }
+  },
+  "about": {
+    "title": "Who we are - Rural Hackers",
+    "description1": "We are a non-profit organization born in Galicia to use technology and community as tools against rural depopulation.",
+    "description2": "We organize residencies, hackathons, intergenerational events and European projects.",
+    "description3": "This is just one more step to demonstrate that rural areas also innovate.",
+    "cta": "Visit our website",
+    "imageAlt": "Person with VR glasses in a rural environment"
+  },
+  "contact": {
+    "title": "Interested in participating?",
+    "subtitle": "Join us to prototype the future of rural areas",
+    "cta": "Sign up",
+    "email": "info@hackerdays.es"
+  },
+  "footer": {
+    "description": "An initiative to prototype the future by Rural Hackers.",
+    "copyright": "Designed with ❤️ from the village of Anceu"
+  }
+} 

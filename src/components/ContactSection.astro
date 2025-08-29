@@ -1,3 +1,16 @@
+---
+interface Props {
+  content: {
+    title: string;
+    subtitle: string;
+    cta: string;
+    email: string;
+  };
+}
+
+const { content } = Astro.props;
+---
+
 <section id="contacto" class="py-16 md:py-24 bg-earth-50">
   <div class="container px-4 md:px-6">
     <div class="max-w-4xl mx-auto">
@@ -6,7 +19,7 @@
           data-aos="fade-up"
           class="text-3xl md:text-4xl font-bold mb-6 text-earth-900"
         >
-          Contacto
+          {content.title}
         </h2>
         
         <p 
@@ -14,7 +27,7 @@
           data-aos-delay="100"
           class="text-lg text-earth-800 leading-relaxed mb-4"
         >
-          ¿Tienes alguna pregunta o quieres participar? Estamos deseando escucharte.
+          {content.subtitle}
         </p>
         
         <p
@@ -22,7 +35,7 @@
           data-aos-delay="150"
           class="text-md text-earth-700 leading-relaxed mb-8"
         >
-          Puedes mandarnos un email a <a href="mailto:hello@ruralhackers.com" class="text-primary-600 hover:underline">hello@ruralhackers.com</a> o mandarnos un mensaje desde el formulario.
+          Puedes mandarnos un email a <a href={`mailto:${content.email}`} class="text-primary-600 hover:underline">{content.email}</a> o mandarnos un mensaje desde el formulario.
         </p>
         
         <div data-aos="fade-up" data-aos-delay="200" class="flex justify-center">
@@ -32,7 +45,7 @@
             rel="noopener noreferrer"
             class="inline-block bg-primary-600 hover:bg-primary-700 text-white px-8 py-3 rounded-md transition-colors duration-200 font-medium"
           >
-            Enviar mensaje
+            {content.cta}
           </a>
         </div>
       </div>

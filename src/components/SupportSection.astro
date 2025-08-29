@@ -1,3 +1,21 @@
+---
+interface Props {
+  content: {
+    title: string;
+    subtitle: string;
+    options: Array<{
+      title: string;
+      description: string;
+      benefits: string[];
+      cta?: string;
+      ctaUrl?: string;
+    }>;
+  };
+}
+
+const { content } = Astro.props;
+---
+
 <section id="apoyar" class="py-16 md:py-24 bg-white">
   <div class="container px-4 md:px-6">
     <div class="text-center max-w-3xl mx-auto mb-12 md:mb-16">
@@ -5,7 +23,7 @@
         data-aos="fade-up"
         class="text-3xl md:text-4xl font-bold mb-6 text-earth-900"
       >
-        ¿Cómo puedes apoyar?
+        {content.title}
       </h2>
       
       <p 
@@ -13,7 +31,7 @@
         data-aos-delay="100"
         class="text-lg text-earth-800 leading-relaxed"
       >
-        Hay múltiples formas de participar y contribuir a que Hacker Days tenga el mayor impacto posible. Encuentra la que mejor se adapte a ti.
+        {content.subtitle}
       </p>
     </div>
     
@@ -26,35 +44,29 @@
       >
         <div class="flex items-center justify-center mb-4">
           <span class="text-2xl mr-3">🔹</span>
-          <h3 class="text-xl font-bold text-earth-900">Empresa colaboradora</h3>
+          <h3 class="text-xl font-bold text-earth-900">{content.options[0].title}</h3>
         </div>
-        <p class="text-earth-700 mb-4">Aporta financiación o materiales para hacer posible el evento y el desarrollo del prototipo.</p>
+        <p class="text-earth-700 mb-4">{content.options[0].description}</p>
         <ul class="space-y-2 mb-6 max-w-lg mx-auto text-left">
-          <li class="flex items-start">
-            <span class="text-accent-500 mr-2">✓</span>
-            <span>Recursos para materiales técnicos</span>
-          </li>
-          <li class="flex items-start">
-            <span class="text-accent-500 mr-2">✓</span>
-            <span>Apoyo logístico y de transporte</span>
-          </li>
-          <li class="flex items-start">
-            <span class="text-accent-500 mr-2">✓</span>
-            <span>Visibilidad como entidad comprometida con el rural</span>
-          </li>
+          {content.options[0].benefits.map((benefit) => (
+            <li class="flex items-start">
+              <span class="text-accent-500 mr-2">✓</span>
+              <span>{benefit}</span>
+            </li>
+          ))}
         </ul>
         <div class="flex justify-center">
           <a 
-            href="https://www.canva.com/design/DAGlj4KffGE/daN1zwB4ZRTaf4B3qjCVfA/edit?utm_content=DAGlj4KffGE&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"
+            href={content.options[0].ctaUrl}
             target="_blank"
             class="inline-block bg-earth-800 hover:bg-earth-900 text-white px-6 py-2 rounded-md transition-colors duration-200 font-medium"
           >
-            Quiero colaborar como empresa
+            {content.options[0].cta}
           </a>
         </div>
       </div>
       
-      <!-- Other 3 cards in a row -->
+      <!-- Other 2 cards in a row -->
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
         <div 
           data-aos="fade-up" 
@@ -63,22 +75,16 @@
         >
           <div class="flex items-center mb-4">
             <span class="text-2xl mr-3">🔹</span>
-            <h3 class="text-xl font-bold text-earth-900">Difusión</h3>
+            <h3 class="text-xl font-bold text-earth-900">{content.options[1].title}</h3>
           </div>
-          <p class="text-earth-700 mb-4">Ayúdanos a contar este proyecto y a llegar a más personas que puedan contribuir.</p>
+          <p class="text-earth-700 mb-4">{content.options[1].description}</p>
           <ul class="space-y-2 mb-6">
-            <li class="flex items-start">
-              <span class="text-accent-500 mr-2">✓</span>
-              <span>Comparte en tus redes sociales</span>
-            </li>
-            <li class="flex items-start">
-              <span class="text-accent-500 mr-2">✓</span>
-              <span>Cuéntaselo a personas que podrían estar interesadas</span>
-            </li>
-            <li class="flex items-start">
-              <span class="text-accent-500 mr-2">✓</span>
-              <span>Ayúdanos a contactar con medios de comunicación</span>
-            </li>
+            {content.options[1].benefits.map((benefit) => (
+              <li class="flex items-start">
+                <span class="text-accent-500 mr-2">✓</span>
+                <span>{benefit}</span>
+              </li>
+            ))}
           </ul>
           <div class="flex space-x-4 justify-center">
             <a 
@@ -121,31 +127,25 @@
         >
           <div class="flex items-center mb-4">
             <span class="text-2xl mr-3">🔹</span>
-            <h3 class="text-xl font-bold text-primary-900">Involúcrate</h3>
+            <h3 class="text-xl font-bold text-primary-900">{content.options[2].title}</h3>
           </div>
-          <p class="text-primary-800 mb-4">Forma parte del equipo de trabajo durante Hackers Days en Anceu.</p>
+          <p class="text-primary-800 mb-4">{content.options[2].description}</p>
           <ul class="space-y-2 mb-6">
-            <li class="flex items-start">
-              <span class="text-accent-500 mr-2">✓</span>
-              <span>Participa activamente en el diseño y desarrollo</span>
-            </li>
-            <li class="flex items-start">
-              <span class="text-accent-500 mr-2">✓</span>
-              <span>Conoce a Olga, Rosabel y la realidad rural</span>
-            </li>
-            <li class="flex items-start">
-              <span class="text-accent-500 mr-2">✓</span>
-              <span>Forma parte de un proyecto con impacto real</span>
-            </li>
+            {content.options[2].benefits.map((benefit) => (
+              <li class="flex items-start">
+                <span class="text-accent-500 mr-2">✓</span>
+                <span>{benefit}</span>
+              </li>
+            ))}
           </ul>
           <div class="flex justify-center">
             <a 
-              href="https://forms.gle/Lbr7PqUZTvsRwe8J6" 
+              href={content.options[2].ctaUrl} 
               target="_blank"
               rel="noopener noreferrer"
               class="inline-block bg-primary-600 hover:bg-primary-700 text-white px-6 py-2 rounded-md transition-colors duration-200 font-medium"
             >
-              Quiero participar en el equipo
+              {content.options[2].cta}
             </a>
           </div>
         </div>

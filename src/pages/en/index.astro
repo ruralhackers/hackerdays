@@ -1,0 +1,38 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import NavBar from '../../components/NavBar.astro';
+import Hero from '../../components/Hero.astro';
+import WhySection from '../../components/WhySection.astro';
+import ChallengeSection from '../../components/ChallengeSection.astro';
+import ParticipantsSection from '../../components/ParticipantsSection.astro';
+import ProgramSection from '../../components/ProgramSection.astro';
+import ImpactSection from '../../components/ImpactSection.astro';
+import LogisticsSection from '../../components/LogisticsSection.astro';
+import SupportSection from '../../components/SupportSection.astro';
+import ImpulsanSection from '../../components/ImpulsanSection.astro';
+import AboutSection from '../../components/AboutSection.astro';
+import ContactSection from '../../components/ContactSection.astro';
+import Footer from '../../components/Footer.astro';
+import { loadTranslations } from '../../utils/i18n';
+
+const translations = await loadTranslations('en');
+---
+
+<Layout 
+  title={translations.meta.title}
+  description={translations.meta.description}
+>
+  <NavBar content={translations.nav} />
+  <Hero content={translations.hero} />
+  <WhySection content={translations.why} />
+  <ChallengeSection content={translations.challenge} />
+  <ParticipantsSection content={translations.participants} />
+  <ProgramSection content={translations.program} />
+  <ImpactSection content={translations.impact} />
+  <LogisticsSection content={translations.logistics} />
+  <SupportSection content={translations.support} />
+  <ImpulsanSection content={translations.impulsan} />
+  <AboutSection content={translations.about} />
+  <ContactSection content={translations.contact} />
+  <Footer content={translations.footer} />
+</Layout> 

@@ -1,5 +1,15 @@
 ---
 import { Image } from 'astro:assets';
+
+interface Props {
+  content: {
+    date: string;
+    title: string;
+    subtitle: string;
+  };
+}
+
+const { content } = Astro.props;
 ---
 
 <section id="inicio" class="relative min-h-screen flex items-center justify-center overflow-hidden">
@@ -38,7 +48,7 @@ import { Image } from 'astro:assets';
     <div class="max-w-3xl mx-auto md:mx-0">
       <div data-aos="fade-up" data-aos-delay="100">
         <span class="inline-block py-1 px-3 border border-primary-500 text-primary-700 rounded-full text-sm font-medium mb-4 bg-white/80 backdrop-blur-sm shadow-lg">
-          1-7 Septiembre 2025 • Anceu, Galicia
+          {content.date}
         </span>
       </div>
       
@@ -47,7 +57,7 @@ import { Image } from 'astro:assets';
         data-aos-delay="200"
         class="text-4xl md:text-5xl lg:text-6xl font-bold text-earth-900 mb-6 leading-tight"
       >
-        Hacker Days: prototipando el futuro del rural, en comunidad.
+        {content.title}
       </h1>
       
       <p 
@@ -55,7 +65,7 @@ import { Image } from 'astro:assets';
         data-aos-delay="300"
         class="text-lg md:text-xl text-earth-800 mb-8 max-w-2xl"
       >
-        Una semana para aportar tu talento y resolver un reto real que puede mejorar la vida de más de 1500 aldeas.
+        {content.subtitle}
       </p>
     </div>
   </div>
