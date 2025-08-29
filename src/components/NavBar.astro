@@ -1,5 +1,6 @@
 ---
 import LanguageSelector from './LanguageSelector.astro';
+import LanguageDropdown from './LanguageDropdown.astro';
 import { getLocaleFromPath, getPathForLocale } from '../utils/i18n';
 
 interface Props {
@@ -28,14 +29,14 @@ const hackerLogPath = currentLocale === 'es' ? '/hacker-log' : `/${currentLocale
 <header id="header" class="fixed w-screen z-50 transition-all duration-300 p-5">
   <div class="container mx-auto px-4 md:px-6 py-5 md:py-6">
     <nav class="flex items-center justify-between">
-      <a href="/" class="flex items-center space-x-3">
+      <a href={currentLocale === 'es' ? '/' : `/${currentLocale}`} class="flex items-center space-x-3">
         <span class="text-2xl md:text-3xl font-bold text-earth-900">Hacker Days</span>
         <span class="text-xl md:text-2xl text-primary-600">2025</span>
       </a>
       
       <!-- Desktop Language Selector Only -->
       <div class="hidden md:flex items-center space-x-4">
-        <LanguageSelector currentPath={currentPath} />
+        <LanguageDropdown currentPath={currentPath} />
         <a 
           href={hackerLogPath} 
           class="flex items-center space-x-2 px-3 py-2 rounded-md text-sm font-medium text-earth-600 hover:text-primary-600 hover:bg-primary-50 transition-colors border border-transparent hover:border-primary-200"
@@ -64,7 +65,7 @@ const hackerLogPath = currentLocale === 'es' ? '/hacker-log' : `/${currentLocale
   <div id="mobile-menu" class="md:hidden hidden fixed top-0 left-0 w-screen h-screen bg-white z-50">
     <div class="container mx-auto">
       <div class="flex justify-between items-center py-6 px-6">
-        <a href="/" class="flex items-center space-x-3">
+        <a href={currentLocale === 'es' ? '/' : `/${currentLocale}`} class="flex items-center space-x-3">
           <span class="text-2xl md:text-3xl font-bold text-earth-900">Hacker Days</span>
           <span class="text-xl md:text-2xl text-primary-600">2025</span>
         </a>
@@ -93,7 +94,7 @@ const hackerLogPath = currentLocale === 'es' ? '/hacker-log' : `/${currentLocale
         <div class="border-t border-earth-200 pt-6">
           <p class="text-sm text-earth-600 mb-4 px-4">Idioma / Language</p>
           <div class="flex flex-col space-y-2 px-4">
-            <a href="/" class={`flex items-center space-x-3 py-3 px-3 rounded-lg transition-colors ${
+            <a href={getPathForLocale(currentPath, 'es')} class={`flex items-center space-x-3 py-3 px-3 rounded-lg transition-colors ${
               currentLocale === 'es' 
                 ? 'bg-primary-100 text-primary-700 border border-primary-300' 
                 : 'text-earth-600 hover:text-primary-600 hover:bg-primary-50'
@@ -101,7 +102,7 @@ const hackerLogPath = currentLocale === 'es' ? '/hacker-log' : `/${currentLocale
               <img src="/flags/es.svg" alt="Español flag" class="w-5 h-4 object-cover rounded-sm" />
               <span>Español</span>
             </a>
-            <a href="/en" class={`flex items-center space-x-3 py-3 px-3 rounded-lg transition-colors ${
+            <a href={getPathForLocale(currentPath, 'en')} class={`flex items-center space-x-3 py-3 px-3 rounded-lg transition-colors ${
               currentLocale === 'en' 
                 ? 'bg-primary-100 text-primary-700 border border-primary-300' 
                 : 'text-earth-600 hover:text-primary-600 hover:bg-primary-50'
@@ -109,7 +110,7 @@ const hackerLogPath = currentLocale === 'es' ? '/hacker-log' : `/${currentLocale
               <img src="/flags/en.svg" alt="English flag" class="w-5 h-4 object-cover rounded-sm" />
               <span>English</span>
             </a>
-            <a href="/gl" class={`flex items-center space-x-3 py-3 px-3 rounded-lg transition-colors ${
+            <a href={getPathForLocale(currentPath, 'gl')} class={`flex items-center space-x-3 py-3 px-3 rounded-lg transition-colors ${
               currentLocale === 'gl' 
                 ? 'bg-primary-100 text-primary-700 border border-primary-300' 
                 : 'text-earth-600 hover:text-primary-600 hover:bg-primary-50'
