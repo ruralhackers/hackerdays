@@ -1,0 +1,99 @@
+---
+import { SUPPORTED_LOCALES, LOCALE_NAMES, getLocaleFromPath, getPathForLocale } from '../utils/i18n';
+
+interface Props {
+  currentPath: string;
+}
+
+const { currentPath } = Astro.props;
+const currentLocale = getLocaleFromPath(currentPath);
+---
+
+<div class="relative inline-block text-left">
+  <button 
+    id="language-dropdown-button"
+    class="flex items-center space-x-2 px-3 py-2 rounded-md text-sm font-medium text-earth-600 hover:text-primary-600 hover:bg-primary-50 transition-colors border border-transparent hover:border-primary-200"
+    aria-expanded="false"
+    aria-haspopup="true"
+  >
+    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"></path>
+    </svg>
+    <span>Language / Idioma</span>
+    <svg class="w-4 h-4 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+    </svg>
+  </button>
+  
+  <div 
+    id="language-dropdown-menu"
+    class="hidden absolute right-0 mt-2 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 z-50"
+  >
+    <div class="py-1" role="menu" aria-orientation="vertical">
+      {SUPPORTED_LOCALES.map((locale) => {
+        const isActive = locale === currentLocale;
+        const path = getPathForLocale(currentPath, locale);
+        
+        return (
+          <a
+            href={path}
+            class={`flex items-center space-x-3 px-4 py-2 text-sm transition-colors ${
+              isActive 
+                ? 'bg-primary-100 text-primary-700' 
+                : 'text-earth-600 hover:bg-primary-50 hover:text-primary-600'
+            }`}
+            role="menuitem"
+            hreflang={locale}
+          >
+            <img 
+              src={`/flags/${locale}.svg`} 
+              alt={`${LOCALE_NAMES[locale]} flag`}
+              class="w-4 h-3 object-cover rounded-sm"
+            />
+            <span>{LOCALE_NAMES[locale]}</span>
+            {isActive && (
+              <svg class="w-4 h-4 ml-auto text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+            )}
+          </a>
+        );
+      })}
+    </div>
+  </div>
+</div>
+
+<script>
+  const dropdownButton = document.getElementById('language-dropdown-button');
+  const dropdownMenu = document.getElementById('language-dropdown-menu');
+  const dropdownArrow = dropdownButton?.querySelector('svg:last-child');
+  
+  if (dropdownButton && dropdownMenu && dropdownArrow) {
+    dropdownButton.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const isExpanded = dropdownButton.getAttribute('aria-expanded') === 'true';
+      
+      dropdownButton.setAttribute('aria-expanded', (!isExpanded).toString());
+      dropdownMenu.classList.toggle('hidden');
+      dropdownArrow.classList.toggle('rotate-180');
+    });
+    
+    // Close dropdown when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!dropdownButton.contains(e.target as Node)) {
+        dropdownButton.setAttribute('aria-expanded', 'false');
+        dropdownMenu.classList.add('hidden');
+        dropdownArrow.classList.remove('rotate-180');
+      }
+    });
+    
+    // Close dropdown when pressing Escape
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        dropdownButton.setAttribute('aria-expanded', 'false');
+        dropdownMenu.classList.add('hidden');
+        dropdownArrow.classList.remove('rotate-180');
+      }
+    });
+  }
+</script> 
