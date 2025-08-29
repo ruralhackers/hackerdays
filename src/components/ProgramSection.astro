@@ -1,3 +1,19 @@
+---
+interface Props {
+  content: {
+    title: string;
+    subtitle: string;
+    days: Array<{
+      day: string;
+      title: string;
+      description: string;
+    }>;
+  };
+}
+
+const { content } = Astro.props;
+---
+
 <section id="programa" class="py-16 md:py-24 bg-white">
   <div class="container px-4 md:px-6">
     <div class="text-center max-w-3xl mx-auto mb-12 md:mb-16">
@@ -5,7 +21,7 @@
         data-aos="fade-up"
         class="text-3xl md:text-4xl font-bold mb-6 text-earth-900"
       >
-        El programa - Una semana para cambiar muchas cosas
+        {content.title}
       </h2>
       
       <p 
@@ -13,7 +29,7 @@
         data-aos-delay="100"
         class="text-lg text-earth-800 leading-relaxed"
       >
-        Del 1 al 7 de septiembre de 2025, viviremos una semana intensa de colaboración, aprendizaje y creación en <a href="https://maps.app.goo.gl/W2Ligd9EkPdvQVCu9" target="_blank">Anceu, Galicia</a>.
+        {content.subtitle}
       </p>
     </div>
     
@@ -22,173 +38,135 @@
         <!-- Timeline line -->
         <div class="absolute left-4 md:left-1/2 transform md:-translate-x-1/2 h-full w-1 bg-primary-200"></div>
         
-        <!-- Day 1-2 -->
-        <div class="relative flex flex-col md:flex-row md:justify-between items-start mb-8 md:mb-16">
-          <div 
-            data-aos="fade-right"
-            class="md:w-5/12 md:text-right order-2 md:order-1 pl-12 md:pl-0 md:pr-8"
-          >
-            <h3 class="text-xl font-bold mb-2 text-primary-700">Días 1-2</h3>
-            <h4 class="text-lg font-semibold mb-2 text-earth-800">Inmersión en la aldea</h4>
-            <p class="text-earth-700">
-              Conoceremos a Olga y Rosabel para entender a fondo las necesidades de gestión del agua. <br/>
-              Mapearemos los procesos actuales y definiremos los objetivos.
-            </p>
-          </div>
-          
-          <div class="absolute left-0 md:left-1/2 transform md:-translate-x-1/2 w-8 h-8 rounded-full bg-primary-500 z-10 flex items-center justify-center order-1 md:order-2">
-            <span class="text-white font-bold">1</span>
-          </div>
-          
-          <div class="md:w-5/12 order-3 pl-12 md:pl-8 mt-4 md:mt-0">
-            <!-- Community illustration -->
-            <div class="bg-earth-50 rounded-lg p-6 shadow-md hidden md:block">
-              <div class="relative h-48">
-                <!-- Houses -->
-                <div class="absolute bottom-0 left-1/4">
-                  <div class="w-16 h-16 bg-brown-400 rounded-lg"></div>
-                  <div class="w-16 h-8 bg-accent-500 -mt-4 rotate-45 origin-bottom-left"></div>
+        {content.days.map((day, index) => (
+          <div class="relative flex flex-col md:flex-row md:justify-between items-start mb-8 md:mb-16">
+            {index % 2 === 0 ? (
+              <>
+                <div 
+                  data-aos="fade-right"
+                  class="md:w-5/12 md:text-right order-2 md:order-1 pl-12 md:pl-0 md:pr-8"
+                >
+                  <h3 class="text-xl font-bold mb-2 text-primary-700">{day.day}</h3>
+                  <h4 class="text-lg font-semibold mb-2 text-earth-800">{day.title}</h4>
+                  <p class="text-earth-700">
+                    {day.description}
+                  </p>
                 </div>
-                <div class="absolute bottom-0 right-1/4">
-                  <div class="w-20 h-20 bg-brown-500 rounded-lg"></div>
-                  <div class="w-20 h-10 bg-accent-400 -mt-5 rotate-45 origin-bottom-left"></div>
+                
+                <div class="absolute left-0 md:left-1/2 transform md:-translate-x-1/2 w-8 h-8 rounded-full bg-primary-500 z-10 flex items-center justify-center order-1 md:order-2">
+                  <span class="text-white font-bold">{index + 1}</span>
                 </div>
-                <!-- People -->
-                <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2">
-                  <div class="flex space-x-4">
-                    <div class="w-8 h-16 bg-primary-400 rounded-full"></div>
-                    <div class="w-8 h-16 bg-secondary-400 rounded-full"></div>
+                
+                <div class="md:w-5/12 order-3 pl-12 md:pl-8 mt-4 md:mt-0">
+                  <!-- Community illustration -->
+                  <div class="bg-earth-50 rounded-lg p-6 shadow-md hidden md:block">
+                    <div class="relative h-48">
+                      {index === 0 && (
+                        <>
+                          <!-- Houses -->
+                          <div class="absolute bottom-0 left-1/4">
+                            <div class="w-16 h-16 bg-brown-400 rounded-lg"></div>
+                            <div class="w-16 h-8 bg-accent-500 -mt-4 rotate-45 origin-bottom-left"></div>
+                          </div>
+                          <div class="absolute bottom-0 right-1/4">
+                            <div class="w-20 h-20 bg-brown-500 rounded-lg"></div>
+                            <div class="w-20 h-10 bg-accent-400 -mt-5 rotate-45 origin-bottom-left"></div>
+                          </div>
+                          <!-- People -->
+                          <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2">
+                            <div class="flex space-x-4">
+                              <div class="w-8 h-16 bg-primary-400 rounded-full"></div>
+                              <div class="w-8 h-16 bg-secondary-400 rounded-full"></div>
+                            </div>
+                          </div>
+                        </>
+                      )}
+                      {index === 2 && (
+                        <>
+                          <!-- Mobile device -->
+                          <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                            <div class="w-20 h-32 bg-white rounded-xl border-4 border-primary-500">
+                              <div class="w-12 h-2 bg-primary-300 rounded mx-auto mt-4"></div>
+                              <div class="w-8 h-8 bg-accent-300 rounded-full mx-auto mt-4"></div>
+                            </div>
+                          </div>
+                          <!-- Feedback indicators -->
+                          <div class="absolute top-1/4 right-1/4">
+                            <div class="w-4 h-4 bg-secondary-400 rounded-full mb-2"></div>
+                            <div class="w-12 h-2 bg-secondary-500 rounded"></div>
+                          </div>
+                        </>
+                      )}
+                    </div>
                   </div>
                 </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        <!-- Day 3-4 -->
-        <div class="relative flex flex-col md:flex-row md:justify-between items-start mb-8 md:mb-16">
-          <div 
-            data-aos="fade-right"
-            class="md:w-5/12 md:text-right hidden md:block order-1"
-          >
-            <!-- Design illustration -->
-            <div class="bg-earth-50 rounded-lg p-6 shadow-md hidden md:block">
-              <div class="relative h-48">
-                <!-- Computer screen -->
-                <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                  <div class="w-32 h-24 bg-primary-200 rounded-lg border-4 border-primary-600"></div>
-                  <div class="w-16 h-4 bg-primary-600 mx-auto mt-2"></div>
+              </>
+            ) : (
+              <>
+                <div 
+                  data-aos="fade-right"
+                  class="md:w-5/12 md:text-right hidden md:block order-1"
+                >
+                  {index === 1 && (
+                    <!-- Design illustration -->
+                    <div class="bg-earth-50 rounded-lg p-6 shadow-md hidden md:block">
+                      <div class="relative h-48">
+                        <!-- Computer screen -->
+                        <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                          <div class="w-32 h-24 bg-primary-200 rounded-lg border-4 border-primary-600"></div>
+                          <div class="w-16 h-4 bg-primary-600 mx-auto mt-2"></div>
+                        </div>
+                        <!-- Code elements -->
+                        <div class="absolute top-1/4 left-1/4">
+                          <div class="w-16 h-2 bg-accent-400 rounded mb-2"></div>
+                          <div class="w-12 h-2 bg-secondary-400 rounded"></div>
+                        </div>
+                      </div>
+                    </div>
+                  )}
+                  {index === 3 && (
+                    <!-- Celebration illustration -->
+                    <div class="bg-earth-50 rounded-lg p-6 shadow-md hidden md:block">
+                      <div class="relative h-48">
+                        <!-- People -->
+                        <div class="absolute bottom-0 left-1/2 transform -translate-x-1/2">
+                          <div class="flex space-x-6">
+                            <div class="w-8 h-16 bg-primary-500 rounded-full"></div>
+                            <div class="w-8 h-16 bg-secondary-500 rounded-full"></div>
+                            <div class="w-8 h-16 bg-accent-500 rounded-full"></div>
+                          </div>
+                        </div>
+                        <!-- Celebration elements -->
+                        <div class="absolute top-0 left-0 right-0">
+                          <div class="flex justify-around">
+                            <div class="w-4 h-4 bg-yellow-500 rounded-full"></div>
+                            <div class="w-4 h-4 bg-accent-400 rounded-full"></div>
+                            <div class="w-4 h-4 bg-secondary-400 rounded-full"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  )}
                 </div>
-                <!-- Code elements -->
-                <div class="absolute top-1/4 left-1/4">
-                  <div class="w-16 h-2 bg-accent-400 rounded mb-2"></div>
-                  <div class="w-12 h-2 bg-secondary-400 rounded"></div>
+                
+                <div class="absolute left-0 md:left-1/2 transform md:-translate-x-1/2 w-8 h-8 rounded-full bg-primary-500 z-10 flex items-center justify-center order-2">
+                  <span class="text-white font-bold">{index + 1}</span>
                 </div>
-              </div>
-            </div>
-          </div>
-          
-          <div class="absolute left-0 md:left-1/2 transform md:-translate-x-1/2 w-8 h-8 rounded-full bg-primary-500 z-10 flex items-center justify-center order-2">
-            <span class="text-white font-bold">2</span>
-          </div>
-          
-          <div 
-            data-aos="fade-left"
-            class="md:w-5/12 order-3 pl-12 md:pl-8"
-          >
-            <h3 class="text-xl font-bold mb-2 text-primary-700">Días 3-4</h3>
-            <h4 class="text-lg font-semibold mb-2 text-earth-800">Diseño y creación del prototipo</h4>
-            <p class="text-earth-700">
-              Trabajaremos en equipos multidisciplinares para diseñar y comenzar a construir una solución que sea sencilla, robusta y adaptada a las necesidades reales.
-            </p>
-          </div>
-        </div>
-        
-        <!-- Day 5-6 -->
-        <div class="relative flex flex-col md:flex-row md:justify-between items-start mb-8 md:mb-16">
-          <div 
-            data-aos="fade-right"
-            class="md:w-5/12 md:text-right order-2 md:order-1 pl-12 md:pl-0 md:pr-8"
-          >
-            <h3 class="text-xl font-bold mb-2 text-primary-700">Días 5-6</h3>
-            <h4 class="text-lg font-semibold mb-2 text-earth-800">Pruebas, mejoras y testeo</h4>
-            <p class="text-earth-700">
-              Probaremos el prototipo con la aldea, recogeremos feedback y realizaremos mejoras para asegurar que la solución es viable y útil.
-            </p>
-          </div>
-          
-          <div class="absolute left-0 md:left-1/2 transform md:-translate-x-1/2 w-8 h-8 rounded-full bg-primary-500 z-10 flex items-center justify-center order-1 md:order-2">
-            <span class="text-white font-bold">3</span>
-          </div>
-          
-          <div class="md:w-5/12 order-3 pl-12 md:pl-8 mt-4 md:mt-0">
-            <!-- Testing illustration -->
-            <div class="bg-earth-50 rounded-lg p-6 shadow-md hidden md:block">
-              <div class="relative h-48">
-                <!-- Mobile device -->
-                <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                  <div class="w-20 h-32 bg-white rounded-xl border-4 border-primary-500">
-                    <div class="w-12 h-2 bg-primary-300 rounded mx-auto mt-4"></div>
-                    <div class="w-8 h-8 bg-accent-300 rounded-full mx-auto mt-4"></div>
-                  </div>
+                
+                <div 
+                  data-aos="fade-left"
+                  class="md:w-5/12 order-3 pl-12 md:pl-8"
+                >
+                  <h3 class="text-xl font-bold mb-2 text-primary-700">{day.day}</h3>
+                  <h4 class="text-lg font-semibold mb-2 text-earth-800">{day.title}</h4>
+                  <p class="text-earth-700">
+                    {day.description}
+                  </p>
                 </div>
-                <!-- Feedback indicators -->
-                <div class="absolute top-1/4 right-1/4">
-                  <div class="w-4 h-4 bg-secondary-400 rounded-full mb-2"></div>
-                  <div class="w-12 h-2 bg-secondary-500 rounded"></div>
-                </div>
-              </div>
-            </div>
+              </>
+            )}
           </div>
-        </div>
-        
-        <!-- Day 7 -->
-        <div class="relative flex flex-col md:flex-row md:justify-between items-start">
-          <div 
-            data-aos="fade-right"
-            class="md:w-5/12 md:text-right hidden md:block order-1"
-          >
-            <!-- Celebration illustration -->
-            <div class="bg-earth-50 rounded-lg p-6 shadow-md hidden md:block">
-              <div class="relative h-48">
-                <!-- People -->
-                <div class="absolute bottom-0 left-1/2 transform -translate-x-1/2">
-                  <div class="flex space-x-6">
-                    <div class="w-8 h-16 bg-primary-500 rounded-full"></div>
-                    <div class="w-8 h-16 bg-secondary-500 rounded-full"></div>
-                    <div class="w-8 h-16 bg-accent-500 rounded-full"></div>
-                  </div>
-                </div>
-                <!-- Celebration elements -->
-                <div class="absolute top-0 left-0 right-0">
-                  <div class="flex justify-around">
-                    <div class="w-4 h-4 bg-yellow-500 rounded-full"></div>
-                    <div class="w-4 h-4 bg-accent-400 rounded-full"></div>
-                    <div class="w-4 h-4 bg-secondary-400 rounded-full"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-          <div class="absolute left-0 md:left-1/2 transform md:-translate-x-1/2 w-8 h-8 rounded-full bg-primary-500 z-10 flex items-center justify-center order-2">
-            <span class="text-white font-bold">4</span>
-          </div>
-          
-          <div 
-            data-aos="fade-left"
-            class="md:w-5/12 order-3 pl-12 md:pl-8"
-          >
-            <h3 class="text-xl font-bold mb-2 text-primary-700">Día 7</h3>
-            <h4 class="text-lg font-semibold mb-2 text-earth-800">Celebración y presentación</h4>
-            <p class="text-earth-700">
-              Celebraremos los logros de la semana y presentaremos el prototipo a otras comunidades de aguas, compartiendo el aprendizaje y ampliando el impacto.
-            </p>
-            <p class="text-earth-700 mt-2">
-              <strong>El prototipo se quedará funcionando en Anceu para su validación.</strong>
-            </p>
-          </div>
-        </div>
+        ))}
       </div>
     </div>
   </div>

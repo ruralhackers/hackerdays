@@ -13,23 +13,26 @@ import ImpulsanSection from '../components/ImpulsanSection.astro';
 import AboutSection from '../components/AboutSection.astro';
 import ContactSection from '../components/ContactSection.astro';
 import Footer from '../components/Footer.astro';
+import { loadTranslations } from '../utils/i18n';
+
+const translations = await loadTranslations('es');
 ---
 
 <Layout 
-  title="Hacker Days - Prototipando el futuro del rural, en comunidad"
-  description="Una semana. Un reto real. Un cambio para muchas aldeas. Hacker Days es una iniciativa para prototipar el futuro del rural, en comunidad."
+  title={translations.meta.title}
+  description={translations.meta.description}
 >
-  <NavBar />
-  <Hero />
-  <WhySection />
-  <ChallengeSection />
-  <ParticipantsSection />
-  <ProgramSection />
-  <ImpactSection />
-  <LogisticsSection />
-  <SupportSection />
-  <ImpulsanSection />
-  <AboutSection />
-  <ContactSection />
-  <Footer />
+  <NavBar content={translations.nav} />
+  <Hero content={translations.hero} />
+  <WhySection content={translations.why} />
+  <ChallengeSection content={translations.challenge} />
+  <ParticipantsSection content={translations.participants} />
+  <ProgramSection content={translations.program} />
+  <ImpactSection content={translations.impact} />
+  <LogisticsSection content={translations.logistics} />
+  <SupportSection content={translations.support} />
+  <ImpulsanSection content={translations.impulsan} />
+  <AboutSection content={translations.about} />
+  <ContactSection content={translations.contact} />
+  <Footer content={translations.footer} />
 </Layout>

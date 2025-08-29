@@ -1,0 +1,218 @@
+{
+  "meta": {
+    "title": "Hacker Days - Prototipando o futuro do rural, en comunidade",
+    "description": "Unha semana. Un reto real. Un cambio para moitas aldeas. Hacker Days é unha iniciativa para prototipar o futuro do rural, en comunidade."
+  },
+  "nav": {
+    "inicio": "Inicio",
+    "porQue": "¿Por que?",
+    "reto": "O reto",
+    "participantes": "Participantes",
+    "programa": "Programa",
+    "impacto": "Impacto",
+    "logistica": "Loxística",
+    "apoyo": "Apoio",
+    "impulsan": "Impulsan",
+    "sobre": "Sobre",
+    "contacto": "Contacto"
+  },
+  "hero": {
+    "date": "1-7 Setembro 2025 • Anceu, Galicia",
+    "title": "Hacker Days: prototipando o futuro do rural, en comunidade.",
+    "subtitle": "Unha semana para aportar o teu talento e resolver un reto real que pode mellorar a vida de máis de 1500 aldeas."
+  },
+  "why": {
+    "title": "¿Por que nace Hacker Days?",
+    "intro1": "Ás veces no rural, os proxectos tardan en chegar ao final. Pero cando nos xuntamos, algo cambia.",
+    "intro2": "Hacker Days nace coa idea de resolver retos reais en só unha semana, demostrando que, aportando cada persoa un pouquiño, se poden construír solucións que axuden a toda unha comunidade.",
+    "story": "Cada edición abordará un novo reto que nace desde a aldea, desde os seus protagonistas.",
+    "storyHighlight": "Este ano, o reto nace de Rosabel e Olga, dúas mulleres de máis de 60 anos que levan anos xestionando o sistema comunitario da auga da súa aldea.",
+    "imageAlt": "Olga e Rosabel, coidadoras da auga comunitária de Anceu"
+  },
+  "challenge": {
+    "title": "O reto 2025: Automatizar a xestión colectiva da auga",
+    "subtitle": "¿E se puidésemos mellorar a vida das persoas que coidan da auga da túa aldea?",
+    "description1": "Rosabel e Olga son dúas veciñas da aldea de Anceu. Elas encárganse da xestión da auga. Non temos empresa distribuidora. Son parte da directiva da Comunidade de Augas de Anceu. Len 400 contadores de auga ao ano, casa por casa cada 3 meses. Detectan fugas, organizan a facturación, fan seguimento.",
+    "question": "¿Que pasará cando elas non estean?",
+    "description2": "Hoxe, pagamos 80€ ao ano grazas ao seu labor desinteresado. Se se perde a xestión comunitária, volverá a subir o prezo para todas as persoas da aldea.",
+    "highlight": "¿E se creamos unha solución open source replicable en 1500 aldeas que facilite continuar con este sistema de xestión colectiva de auga?",
+    "goals": {
+      "title": "Queremos:",
+      "items": [
+        "Que a xente da aldea teña mellor calidade de vida.",
+        "Que a aldea manteña a xestión colectiva da auga.",
+        "Que ti veñas axudarnos a deseñala."
+      ]
+    },
+    "imageAlt": "Mulleres da aldea xestionando un recurso comunitario",
+    "imageCaption": "Olga e Rosabel, coidadoras da auga comunitária da aldea de Anceu"
+  },
+  "participants": {
+    "title": "¿A quen buscamos?",
+    "subtitle": "Necesitamos talento diverso para abordar este reto desde diferentes perspectivas.",
+    "subtitle2": "Se te identificas con algún destes perfís, ¡queremos contar contigo!",
+    "deadline": "Inscricións abertas ata o 7 de xullo",
+    "cta": "Quero aportar o meu talento",
+    "profiles": [
+      {
+        "title": "Enxeñaría",
+        "description": "Para deseñar e implementar unha web con autenticación, para xestión de recursos, e notificacións."
+      },
+      {
+        "title": "Deseño",
+        "description": "Para mostrar o complexo de forma sinxela e crear interfaces intuitivas para persoas con diferentes niveis dixitais."
+      },
+      {
+        "title": "UX/UI",
+        "description": "Para mellorar a experiencia de uso e garantir que a solución sexa accesible para todos os rangos de idade."
+      },
+      {
+        "title": "Comunicación",
+        "description": "Para documentar o que facemos, e replicar o modelo nas 1500 aldeas que xestionan a auga de forma comunitária."
+      },
+      {
+        "title": "Dixitalización",
+        "description": "Para ensinar a quen o van usar e facilitar o relevo xeracional na xestión colectiva da auga."
+      },
+      {
+        "title": "Mediación",
+        "description": "Para escoitar, entender e conectar coa realidade rural e as necesidades derivadas da xestión colectiva da auga."
+      }
+    ]
+  },
+  "program": {
+    "title": "O programa - Unha semana para cambiar moitas cousas",
+    "subtitle": "Do 1 ao 7 de setembro de 2025, viviremos unha semana intensa de colaboración, aprendizaxe e creación en Anceu, Galicia.",
+    "days": [
+      {
+        "day": "Días 1-2",
+        "title": "Inmersión na aldea",
+        "description": "Coñeceremos a Olga e Rosabel para entender a fondo as necesidades de xestión da auga. Mapearemos os procesos actuais e definiremos os obxectivos."
+      },
+      {
+        "day": "Días 3-4",
+        "title": "Deseño e creación do prototipo",
+        "description": "Traballaremos en equipos multidisciplinares para deseñar e comezar a construír unha solución que sexa sinxela, robusta e adaptada ás necesidades reais."
+      },
+      {
+        "day": "Días 5-6",
+        "title": "Probas, melloras e testeo",
+        "description": "Probaremos o prototipo coa aldea, recolleremos feedback e realizaremos melloras para asegurar que a solución é viable e útil."
+      },
+      {
+        "day": "Día 7",
+        "title": "Celebración e presentación",
+        "description": "Celebraremos os logros da semana e presentaremos o prototipo a outras comunidades de augas, compartindo o aprendizaxe e ampliando o impacto. O prototipo quedará funcionando en Anceu para a súa validación."
+      }
+    ]
+  },
+  "impact": {
+    "title": "¿Que cambia se participas ou apoias?",
+    "subtitle": "Unha semana do teu talento pode significar anos de autonomía e comunidade para moitas persoas.",
+    "impacts": [
+      {
+        "title": "Cambia a vida de Rosabel e Olga",
+        "description": "Facilitamos o seu labor esencial e aseguramos que o seu esforzo teña continuidade."
+      },
+      {
+        "title": "Cambia o futuro de 1500 aldeas",
+        "description": "Unha solución replicable que pode axudar a centos de comunidades co mesmo reto."
+      },
+      {
+        "title": "Cambia a túa forma de entender o rural",
+        "description": "Unha experiencia transformadora que te conectará coa vida na aldea."
+      }
+    ]
+  },
+  "logistics": {
+    "title": "Loxística de Hacker Days",
+    "items": [
+      {
+        "title": "Participación gratuita",
+        "description": "A participación en Hacker Days é completamente gratuita."
+      },
+      {
+        "title": "Aloxamento incluído",
+        "description": "A estancia será en Anceu Coliving, un espazo compartido para 14 persoas, rodeado de natureza e deseñado para a colaboración."
+      },
+      {
+        "title": "Manutención incluída",
+        "description": "A manutención está incluída durante toda a semana."
+      },
+      {
+        "title": "Transporte",
+        "description": "O transporte ata Anceu non está cuberto, cada participante debe xestionalo pola súa conta."
+      },
+      {
+        "title": "Espazos de traballo",
+        "description": "O reto desenvolverase entre Anceu Coliving e a Casa do Pobo Vecinal, conectando os espazos de vida, creación e comunidade."
+      }
+    ],
+    "imageAlt": "Mural da auga en Anceu"
+  },
+  "support": {
+    "title": "¿Como podes apoiar?",
+    "subtitle": "Hai múltiples formas de participar e contribuir a que Hacker Days teña o maior impacto posible. Atopa a que mellor se adapte a ti.",
+    "options": [
+      {
+        "title": "Empresa colaboradora",
+        "description": "Aporta financiación ou materiais para facer posible o evento e o desenvolvemento do prototipo.",
+        "benefits": [
+          "Recursos para materiais técnicos",
+          "Apoio loxístico e de transporte",
+          "Visibilidade como entidade comprometida co rural"
+        ],
+        "cta": "Quero colaborar como empresa",
+        "ctaUrl": "https://www.canva.com/design/DAGlj4KffGE/daN1zwB4ZRTaf4B3qjCVfA/edit?utm_content=DAGlj4KffGE&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"
+      },
+      {
+        "title": "Difusión",
+        "description": "Axúdanos a contar este proxecto e a chegar a máis persoas que poidan contribuir.",
+        "benefits": [
+          "Comparte nas túas redes sociais",
+          "Cóntaselo a persoas que poderían estar interesadas",
+          "Axúdanos a contactar con medios de comunicación"
+        ]
+      },
+      {
+        "title": "Involúcrate",
+        "description": "Forma parte do equipo de traballo durante Hackers Days en Anceu.",
+        "benefits": [
+          "Participa activamente no deseño e desenvolvemento",
+          "Coñece a Olga, Rosabel e a realidade rural",
+          "Forma parte dun proxecto con impacto real"
+        ],
+        "cta": "Quero participar no equipo",
+        "ctaUrl": "https://forms.gle/Lbr7PqUZTvsRwe8J6"
+      }
+    ]
+  },
+  "impulsan": {
+    "title": "Impulsan",
+    "subtitle": "Empresas e organizacións comprometidas co futuro do entorno rural.",
+    "hackerDays": "Empresas que impulsan Hacker Days",
+    "ruralHackers": "Empresas que xa confiaron en Rural Hackers",
+    "cta": {
+      "text": "¿A túa empresa tamén quere impulsar a transformación do mundo rural?",
+      "button": "Quero impulsar Hacker Days"
+    }
+  },
+  "about": {
+    "title": "Quen somos - Rural Hackers",
+    "description1": "Somos unha organización sen ánimo de lucro nacida en Galicia para usar a tecnoloxía e a comunidade como ferramentas contra o despoboamento rural.",
+    "description2": "Organizamos residencias, hackathons, eventos interxeracionais e proxectos europeos.",
+    "description3": "Este é só un paso máis para demostrar que o rural tamén innova.",
+    "cta": "Visita a nosa web",
+    "imageAlt": "Persoa con gafas VR nun entorno rural"
+  },
+  "contact": {
+    "title": "¿Interésate en participar?",
+    "subtitle": "Únete a nós para prototipar o futuro do rural",
+    "cta": "Inscríbete",
+    "email": "info@hackerdays.es"
+  },
+  "footer": {
+    "description": "Unha iniciativa para prototipar o futuro by Rural Hackers.",
+    "copyright": "Deseñado con ❤️ desde a aldea de Anceu"
+  }
+} 

@@ -1,3 +1,20 @@
+---
+interface Props {
+  content: {
+    title: string;
+    subtitle: string;
+    hackerDays: string;
+    ruralHackers: string;
+    cta: {
+      text: string;
+      button: string;
+    };
+  };
+}
+
+const { content } = Astro.props;
+---
+
 <section id="impulsan" class="py-16 md:py-24 bg-earth-50">
   <div class="container px-4 md:px-6">
     <div class="max-w-4xl mx-auto">
@@ -6,7 +23,7 @@
           data-aos="fade-up"
           class="text-3xl md:text-4xl font-bold mb-6 text-earth-900"
         >
-          Impulsan
+          {content.title}
         </h2>
         
         <p 
@@ -14,14 +31,14 @@
           data-aos-delay="100"
           class="text-lg text-earth-800 leading-relaxed"
         >
-          Empresas y organizaciones comprometidas con el futuro del entorno rural.
+          {content.subtitle}
         </p>
       </div>
       
       <!-- Empresas que impulsan Hacker Days -->
       <div data-aos="fade-up" data-aos-delay="150" class="mb-16">
         <h3 class="text-xl font-bold text-earth-900 text-center mb-8">
-          Empresas que impulsan Hacker Days
+          {content.hackerDays}
         </h3>
         <div class="space-y-8 max-w-4xl mx-auto">
           <!-- Primera fila: 3 empresas -->
@@ -52,7 +69,15 @@
           </div>
 
           <!-- Segunda fila: 2 empresas -->
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center max-w-2xl mx-auto">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center mx-auto">
+            <div class="grayscale hover:grayscale-0 transition-all duration-300 opacity-80 hover:opacity-100 mx-auto">
+              <a href="https://viko.net/" target="_blank" rel="noopener noreferrer">
+                <div class="w-48 h-24 bg-white rounded-lg shadow-sm flex items-center justify-center p-4">
+                  <img src="/logos/viko.jpeg" alt="Viko" class="max-w-full max-h-full object-contain" />
+                </div>
+              </a>
+            </div>
+
             <div class="grayscale hover:grayscale-0 transition-all duration-300 opacity-80 hover:opacity-100 mx-auto">
               <a href="https://teimas.com/" target="_blank" rel="noopener noreferrer">
                 <div class="w-48 h-24 bg-white rounded-lg shadow-sm flex items-center justify-center p-4">
@@ -75,7 +100,7 @@
       <!-- Empresas que confían en Rural Hackers -->
       <div data-aos="fade-up" data-aos-delay="200">
         <h3 class="text-sm font-medium text-earth-900 text-center mb-6">
-          Empresas que ya han confiado en Rural Hackers
+          {content.ruralHackers}
         </h3>
         
         <div class="grid grid-cols-2 md:grid-cols-3 gap-8 items-center max-w-4xl mx-auto">
@@ -108,7 +133,7 @@
       <!-- CTA para empresas interesadas -->
       <div data-aos="fade-up" data-aos-delay="250" class="mt-12 text-center">
         <p class="text-lg text-earth-800 mb-6">
-          ¿Tu empresa también quiere impulsar la transformación del mundo rural?
+          {content.cta.text}
         </p>
         <a 
           href="https://forms.gle/Lbr7PqUZTvsRwe8J6" 
@@ -116,7 +141,7 @@
           rel="noopener noreferrer"
           class="inline-block bg-primary-600 hover:bg-primary-700 text-white px-6 py-3 rounded-md transition-colors duration-200 font-medium"
         >
-          Quiero impulsar Hacker Days
+          {content.cta.button}
         </a>
       </div>
     </div>

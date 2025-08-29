@@ -1,3 +1,18 @@
+---
+interface Props {
+  content: {
+    title: string;
+    subtitle: string;
+    impacts: Array<{
+      title: string;
+      description: string;
+    }>;
+  };
+}
+
+const { content } = Astro.props;
+---
+
 <section class="py-16 md:py-24 bg-accent-50">
   <div class="container px-4 md:px-6">
     <div class="max-w-3xl mx-auto text-center">
@@ -5,7 +20,7 @@
         data-aos="fade-up"
         class="text-3xl md:text-4xl font-bold mb-8 text-earth-900"
       >
-        ¿Qué cambia si participas o apoyas?
+        {content.title}
       </h2>
       
       <div 
@@ -13,56 +28,49 @@
         data-aos="fade-up" 
         data-aos-delay="150"
       >
-        <div class="bg-white rounded-xl shadow-md p-6 text-center">
-          <div class="w-20 h-20 mx-auto mb-4">
-            <div class="bg-primary-50 w-full h-full rounded-lg p-3">
-              <!-- Stylized person illustration -->
-              <div class="relative w-full h-full">
-                <div class="absolute w-8 h-8 bg-primary-400 rounded-full top-0 left-1/2 transform -translate-x-1/2"></div>
-                <div class="absolute w-10 h-10 bg-primary-500 rounded-lg bottom-0 left-1/2 transform -translate-x-1/2"></div>
+        {content.impacts.map((impact, index) => (
+          <div class="bg-white rounded-xl shadow-md p-6 text-center">
+            <div class="w-20 h-20 mx-auto mb-4">
+              <div class={`w-full h-full rounded-lg p-3 ${
+                index === 0 ? 'bg-primary-50' : 
+                index === 1 ? 'bg-secondary-50' : 'bg-accent-50'
+              }`}>
+                {index === 0 && (
+                  <!-- Stylized person illustration -->
+                  <div class="relative w-full h-full">
+                    <div class="absolute w-8 h-8 bg-primary-400 rounded-full top-0 left-1/2 transform -translate-x-1/2"></div>
+                    <div class="absolute w-10 h-10 bg-primary-500 rounded-lg bottom-0 left-1/2 transform -translate-x-1/2"></div>
+                  </div>
+                )}
+                {index === 1 && (
+                  <!-- Stylized houses illustration -->
+                  <div class="relative w-full h-full">
+                    <div class="absolute bottom-0 left-0">
+                      <div class="w-6 h-6 bg-secondary-400 rounded"></div>
+                      <div class="w-6 h-3 bg-secondary-500 -mt-1 rotate-45 origin-bottom-left"></div>
+                    </div>
+                    <div class="absolute bottom-0 right-0">
+                      <div class="w-6 h-6 bg-secondary-500 rounded"></div>
+                      <div class="w-6 h-3 bg-secondary-600 -mt-1 rotate-45 origin-bottom-left"></div>
+                    </div>
+                  </div>
+                )}
+                {index === 2 && (
+                  <!-- Stylized transformation illustration -->
+                  <div class="relative w-full h-full">
+                    <div class="absolute inset-0 flex items-center justify-center">
+                      <div class="w-10 h-10 bg-accent-400 rounded-full"></div>
+                      <div class="absolute w-full h-2 bg-accent-500 transform rotate-45"></div>
+                      <div class="absolute w-full h-2 bg-accent-500 transform -rotate-45"></div>
+                    </div>
+                  </div>
+                )}
               </div>
             </div>
+            <h3 class="text-xl font-semibold mb-2 text-earth-900">{impact.title}</h3>
+            <p class="text-earth-700">{impact.description}</p>
           </div>
-          <h3 class="text-xl font-semibold mb-2 text-earth-900">Cambia la vida de Rosabel y Olga</h3>
-          <p class="text-earth-700">Facilitamos su labor esencial y aseguramos que su esfuerzo tenga continuidad.</p>
-        </div>
-        
-        <div class="bg-white rounded-xl shadow-md p-6 text-center">
-          <div class="w-20 h-20 mx-auto mb-4">
-            <div class="bg-secondary-50 w-full h-full rounded-lg p-3">
-              <!-- Stylized houses illustration -->
-              <div class="relative w-full h-full">
-                <div class="absolute bottom-0 left-0">
-                  <div class="w-6 h-6 bg-secondary-400 rounded"></div>
-                  <div class="w-6 h-3 bg-secondary-500 -mt-1 rotate-45 origin-bottom-left"></div>
-                </div>
-                <div class="absolute bottom-0 right-0">
-                  <div class="w-6 h-6 bg-secondary-500 rounded"></div>
-                  <div class="w-6 h-3 bg-secondary-600 -mt-1 rotate-45 origin-bottom-left"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <h3 class="text-xl font-semibold mb-2 text-earth-900">Cambia el futuro de 1500 aldeas</h3>
-          <p class="text-earth-700">Una solución replicable que puede ayudar a cientos de comunidades con el mismo reto.</p>
-        </div>
-        
-        <div class="bg-white rounded-xl shadow-md p-6 text-center">
-          <div class="w-20 h-20 mx-auto mb-4">
-            <div class="bg-accent-50 w-full h-full rounded-lg p-3">
-              <!-- Stylized transformation illustration -->
-              <div class="relative w-full h-full">
-                <div class="absolute inset-0 flex items-center justify-center">
-                  <div class="w-10 h-10 bg-accent-400 rounded-full"></div>
-                  <div class="absolute w-full h-2 bg-accent-500 transform rotate-45"></div>
-                  <div class="absolute w-full h-2 bg-accent-500 transform -rotate-45"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <h3 class="text-xl font-semibold mb-2 text-earth-900">Cambia tu forma de entender el rural</h3>
-          <p class="text-earth-700">Una experiencia transformadora que te conectará con la vida en la aldea.</p>
-        </div>
+        ))}
       </div>
       
       <p 
@@ -70,7 +78,7 @@
         data-aos="fade-up" 
         data-aos-delay="200"
       >
-        Una semana de tu talento puede significar años de autonomía y comunidad para muchas personas.
+        {content.subtitle}
       </p>
     </div>
   </div>
