@@ -1,0 +1,74 @@
+---
+interface Props {
+  content: {
+    title: string;
+    subtitle: string;
+    date: string;
+    description: string;
+    comingSoon: {
+      title: string;
+      subtitle: string;
+      featuresTitle: string;
+      features: Array<{
+        icon: string;
+        text: string;
+      }>;
+    };
+  };
+}
+
+const { content } = Astro.props;
+---
+
+<!-- Hero Section -->
+<section class="pt-32 pb-16 bg-white">
+  <div class="container mx-auto px-4">
+    <div class="max-w-4xl mx-auto text-center">
+      <h1 class="text-4xl md:text-6xl font-bold text-earth-900 mb-6">
+        {content.title}
+      </h1>
+      <p class="text-xl md:text-2xl text-earth-700 mb-8">
+        {content.subtitle}
+      </p>
+      <div class="bg-gradient-to-br from-primary-50 to-earth-50 rounded-lg shadow-lg p-6 md:p-8">
+        <p class="text-lg text-earth-600 mb-4">
+          <strong>{content.date}</strong>
+        </p>
+        <p class="text-earth-600">
+          {content.description}
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Content Section -->
+<section class="py-16 bg-gradient-to-br from-earth-50 to-primary-50">
+  <div class="container mx-auto px-4">
+    <div class="max-w-4xl mx-auto">
+      <!-- Coming Soon -->
+      <div class="text-center py-16">
+        <div class="text-6xl mb-6">🚧</div>
+        <h2 class="text-3xl font-bold text-earth-900 mb-4">
+          {content.comingSoon.title}
+        </h2>
+        <p class="text-xl text-earth-600 mb-8">
+          {content.comingSoon.subtitle}
+        </p>
+        <div class="bg-white rounded-lg p-6 shadow-lg">
+          <h3 class="text-xl font-semibold text-earth-800 mb-4">
+            {content.comingSoon.featuresTitle}
+          </h3>
+          <ul class="text-left space-y-3 text-earth-700">
+            {content.comingSoon.features.map((feature) => (
+              <li class="flex items-start">
+                <span class="text-primary-600 mr-3">{feature.icon}</span>
+                <span>{feature.text}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> 
