@@ -1,5 +1,6 @@
 ---
 import LanguageSelector from './LanguageSelector.astro';
+import { getLocaleFromPath, getPathForLocale } from '../utils/i18n';
 
 interface Props {
   content: {
@@ -8,6 +9,7 @@ interface Props {
     reto: string;
     participantes: string;
     programa: string;
+    hackerLog: string;
     impacto: string;
     logistica: string;
     apoyo: string;
@@ -19,6 +21,8 @@ interface Props {
 
 const { content } = Astro.props;
 const currentPath = Astro.url.pathname;
+const currentLocale = getLocaleFromPath(currentPath);
+const hackerLogPath = currentLocale === 'es' ? '/hacker-log' : `/${currentLocale}/hacker-log`;
 ---
 
 <header id="header" class="fixed w-screen z-50 transition-all duration-300 p-5">
@@ -30,8 +34,17 @@ const currentPath = Astro.url.pathname;
       </a>
       
       <!-- Desktop Language Selector Only -->
-      <div class="hidden md:block">
+      <div class="hidden md:flex items-center space-x-4">
         <LanguageSelector currentPath={currentPath} />
+        <a 
+          href={hackerLogPath} 
+          class="flex items-center space-x-2 px-3 py-2 rounded-md text-sm font-medium text-earth-600 hover:text-primary-600 hover:bg-primary-50 transition-colors border border-transparent hover:border-primary-200"
+        >
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+          </svg>
+          <span>{content.hackerLog}</span>
+        </a>
       </div>
       
       <!-- Mobile menu button -->
@@ -45,13 +58,65 @@ const currentPath = Astro.url.pathname;
         </svg>
       </button>
     </nav>
-    
-    <!-- Mobile Navigation -->
-    <div id="mobile-menu" class="md:hidden hidden pb-4">
-      <div class="flex flex-col space-y-4 pt-4">
-        <div class="border-t border-earth-200 pt-4">
-          <div class="flex justify-end">
-            <LanguageSelector currentPath={currentPath} />
+  </div>
+  
+  <!-- Mobile Navigation - Fixed position -->
+  <div id="mobile-menu" class="md:hidden hidden fixed top-0 left-0 w-screen h-screen bg-white z-50">
+    <div class="container mx-auto">
+      <div class="flex justify-between items-center py-6 px-6">
+        <a href="/" class="flex items-center space-x-3">
+          <span class="text-2xl md:text-3xl font-bold text-earth-900">Hacker Days</span>
+          <span class="text-xl md:text-2xl text-primary-600">2025</span>
+        </a>
+        <button 
+          id="mobile-menu-close"
+          class="p-2 rounded-md text-earth-700 hover:text-primary-600 hover:bg-primary-50 transition-colors"
+          aria-label="Close menu"
+        >
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+      
+      <div class="flex flex-col space-y-6">
+        <a 
+          href={hackerLogPath} 
+          class="flex items-center space-x-3 px-4 py-4 rounded-lg text-lg font-medium text-earth-600 hover:text-primary-600 hover:bg-primary-50 transition-colors border border-transparent hover:border-primary-200"
+        >
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+          </svg>
+          <span>{content.hackerLog}</span>
+        </a>
+        
+        <div class="border-t border-earth-200 pt-6">
+          <p class="text-sm text-earth-600 mb-4 px-4">Idioma / Language</p>
+          <div class="flex flex-col space-y-2 px-4">
+            <a href="/" class={`flex items-center space-x-3 py-3 px-3 rounded-lg transition-colors ${
+              currentLocale === 'es' 
+                ? 'bg-primary-100 text-primary-700 border border-primary-300' 
+                : 'text-earth-600 hover:text-primary-600 hover:bg-primary-50'
+            }`}>
+              <img src="/flags/es.svg" alt="Español flag" class="w-5 h-4 object-cover rounded-sm" />
+              <span>Español</span>
+            </a>
+            <a href="/en" class={`flex items-center space-x-3 py-3 px-3 rounded-lg transition-colors ${
+              currentLocale === 'en' 
+                ? 'bg-primary-100 text-primary-700 border border-primary-300' 
+                : 'text-earth-600 hover:text-primary-600 hover:bg-primary-50'
+            }`}>
+              <img src="/flags/en.svg" alt="English flag" class="w-5 h-4 object-cover rounded-sm" />
+              <span>English</span>
+            </a>
+            <a href="/gl" class={`flex items-center space-x-3 py-3 px-3 rounded-lg transition-colors ${
+              currentLocale === 'gl' 
+                ? 'bg-primary-100 text-primary-700 border border-primary-300' 
+                : 'text-earth-600 hover:text-primary-600 hover:bg-primary-50'
+            }`}>
+              <img src="/flags/gl.svg" alt="Galego flag" class="w-5 h-4 object-cover rounded-sm" />
+              <span>Galego</span>
+            </a>
           </div>
         </div>
       </div>
@@ -74,10 +139,18 @@ const currentPath = Astro.url.pathname;
   // Mobile menu toggle
   const mobileMenuButton = document.getElementById('mobile-menu-button');
   const mobileMenu = document.getElementById('mobile-menu');
+  const mobileMenuClose = document.getElementById('mobile-menu-close');
   
-  if (mobileMenuButton && mobileMenu) {
+  if (mobileMenuButton && mobileMenu && mobileMenuClose) {
     mobileMenuButton.addEventListener('click', () => {
       mobileMenu.classList.toggle('hidden');
+      // Prevent body scroll when menu is open
+      document.body.style.overflow = mobileMenu.classList.contains('hidden') ? 'auto' : 'hidden';
+    });
+
+    mobileMenuClose.addEventListener('click', () => {
+      mobileMenu.classList.add('hidden');
+      document.body.style.overflow = 'auto';
     });
     
     // Close mobile menu when clicking on a link
@@ -85,7 +158,16 @@ const currentPath = Astro.url.pathname;
     mobileLinks.forEach(link => {
       link.addEventListener('click', () => {
         mobileMenu.classList.add('hidden');
+        document.body.style.overflow = 'auto';
       });
+    });
+    
+    // Close mobile menu when clicking outside
+    mobileMenu.addEventListener('click', (e) => {
+      if (e.target === mobileMenu) {
+        mobileMenu.classList.add('hidden');
+        document.body.style.overflow = 'auto';
+      }
     });
   }
   

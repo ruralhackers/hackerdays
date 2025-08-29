@@ -11,6 +11,7 @@ export interface Translations {
     reto: string;
     participantes: string;
     programa: string;
+    hackerLog: string;
     impacto: string;
     logistica: string;
     apoyo: string;
@@ -115,6 +116,21 @@ export interface Translations {
     subtitle: string;
     cta: string;
     email: string;
+  };
+  hackerLog: {
+    title: string;
+    subtitle: string;
+    date: string;
+    description: string;
+    comingSoon: {
+      title: string;
+      subtitle: string;
+      featuresTitle: string;
+      features: Array<{
+        icon: string;
+        text: string;
+      }>;
+    };
   };
   footer: {
     description: string;

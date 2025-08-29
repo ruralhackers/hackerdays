@@ -1,0 +1,18 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import NavBar from '../../components/NavBar.astro';
+import HackerLogSection from '../../components/HackerLogSection.astro';
+import Footer from '../../components/Footer.astro';
+import { loadTranslations } from '../../utils/i18n';
+
+const translations = await loadTranslations('en');
+---
+
+<Layout 
+  title="Hacker Log - Hacker Days 2025"
+  description="Follow day by day the progress of the water management hackathon in Anceu, Galicia."
+>
+  <NavBar content={translations.nav} />
+  <HackerLogSection content={translations.hackerLog} />
+  <Footer content={translations.footer} />
+</Layout>

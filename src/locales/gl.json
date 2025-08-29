@@ -9,6 +9,7 @@
     "reto": "O reto",
     "participantes": "Participantes",
     "programa": "Programa",
+    "hackerLog": "Hacker Log",
     "impacto": "Impacto",
     "logistica": "Loxística",
     "apoyo": "Apoio",
@@ -210,6 +211,39 @@
     "subtitle": "Únete a nós para prototipar o futuro do rural",
     "cta": "Inscríbete",
     "email": "info@hackerdays.es"
+  },
+  "hackerLog": {
+    "title": "Hacker Log",
+    "subtitle": "Sigue día a día os avances do hackathon sobre xestión da auga",
+    "date": "1-7 Setembro 2025 • Anceu, Galicia",
+    "description": "Aquí iremos compartindo fotos, vídeos e actualizacións de todo o que suceda durante a semana do hackathon. Desde a inmersión na aldea ata a presentación final da solución.",
+    "comingSoon": {
+      "title": "Próximamente",
+      "subtitle": "O Hacker Log estará dispoñible durante e despois do evento",
+      "featuresTitle": "¿Que atoparás aquí?",
+      "features": [
+        {
+          "icon": "📸",
+          "text": "Fotos e vídeos do día a día"
+        },
+        {
+          "icon": "📝",
+          "text": "Actualizacións de progreso"
+        },
+        {
+          "icon": "👥",
+          "text": "Historias dos participantes"
+        },
+        {
+          "icon": "💡",
+          "text": "Descubrimentos e aprendizaxes"
+        },
+        {
+          "icon": "🏆",
+          "text": "Resultados finais"
+        }
+      ]
+    }
   },
   "footer": {
     "description": "Unha iniciativa para prototipar o futuro by Rural Hackers.",
