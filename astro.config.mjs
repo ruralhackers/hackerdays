@@ -5,6 +5,7 @@ import node from '@astrojs/netlify';
 
 // https://astro.build/config
 export default defineConfig({
+  site: 'https://hackerdays.org',
   integrations: [tailwind()],
   i18n: {
     locales: ["es", "gl", "en"],

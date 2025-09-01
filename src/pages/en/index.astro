@@ -16,11 +16,21 @@ import Footer from '../../components/Footer.astro';
 import { loadTranslations } from '../../utils/i18n';
 
 const translations = await loadTranslations('en');
+
+// Hreflang for multilingual SEO
+const hreflangs = [
+  { lang: 'es', href: 'https://hackerdays.org/' },
+  { lang: 'en', href: 'https://hackerdays.org/en/' },
+  { lang: 'gl', href: 'https://hackerdays.org/gl/' },
+  { lang: 'x-default', href: 'https://hackerdays.org/' }
+];
 ---
 
 <Layout 
   title={translations.meta.title}
   description={translations.meta.description}
+  lang="en"
+  hreflangs={hreflangs}
 >
   <NavBar content={translations.nav} />
   <Hero content={translations.hero} />

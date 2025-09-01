@@ -1,0 +1,16 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://hackerdays.org/sitemap.xml
+
+# Block specific paths if needed
+# Disallow: /admin/
+# Disallow: /private/
+
+# Allow specific bots
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: / 
