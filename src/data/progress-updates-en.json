@@ -1,0 +1,123 @@
+{
+  "updates": [
+    {
+      "id": "day-1",
+      "day": 1,
+      "date": "2025-08-31",
+      "title": "Day 1: Galician rural areas as the epicenter of digital change",
+      "description": "The first day of Hacker Days started with the excitement of those who know something important is about to begin. Participants arrived in Anceu, a small Galician village of only 97 inhabitants, transformed these days into the center of a collective adventure that unites technology and territory.\n\nThere they were received by the human team of Rural Hackers, who has promoted this event with the objective of connecting technological entities with rural communities to design digital solutions. Nacho, África, Agustín and Noelia welcomed all participants, making sure every detail was ready for a week of coexistence and creation.\n\nIt has been a landing day, of first conversations, of looking around and feeling that this rural environment has a lot to say and contribute. During the next seven days, this corner of Galicia will be the place where diverse people will imagine, design and build digital solutions thought for the neighbors who need them most. And this is just the beginning.",
+      "image": "/images/progress/day-1.jpg",
+      "imageAlt": "Rural Hackers team: África, Agus, Noe and Nacho",
+      "highlights": [
+        "Arrival of participants in Anceu (97 inhabitants)",
+        "Welcome from the Rural Hackers team",
+        "First conversations and presentations",
+        "First contact with the Galician rural environment"
+      ],
+      "participants": 20,
+      "mood": "excited"
+    },
+    {
+      "id": "day-2",
+      "day": 2,
+      "date": "2025-09-01",
+      "title": "Day 2: Anceu as starting point, rural areas as destination",
+      "description": "The second day began with a mixture of curiosity and commitment. Already integrated, participants listened attentively to the presentation of the great challenge that will mark this edition of Hacker Days: transforming water management in rural areas. A reality that often goes unnoticed, but is vital for life in villages, was put on the table.\n\nThe prototype will be based in Anceu, where Rosabel and Olga dedicate, voluntarily, about 400 hours a year to keep the water system running: reading meters, supervising the tank, recording measurements by hand... A silent and essential work that faces an uncertain future, since the lack of generational relief and dependence on the knowledge of certain neighbors makes this model fragile.\n\nThat's why the objective of this week became clear: to collaboratively design a digital, open and free tool that facilitates this community work. Thus began the creation phase, with the first ideas coming to life. A group of twenty experts in technology, design and communication (along with five children) prepared to \"code and make magic\" during the days to come. With Orlando, Chema and Carol from the tech team, ideas began to take shape, heading to become real tools for the daily life of villages.",
+      "image": "/images/progress/day-2.jpg",
+      "imageAlt": "Tech team: Orlando, Chema and Carol",
+      "highlights": [
+        "Presentation of the challenge: rural water management",
+        "Knowledge of Rosabel and Olga's work (400h/year)",
+        "Start of the creation phase",
+        "Formation of multidisciplinary teams"
+      ],
+      "participants": 25,
+      "mood": "focused"
+    },
+    {
+      "id": "day-3",
+      "day": 3,
+      "date": "2025-09-02",
+      "title": "Day 3: Drawing the future of water in villages",
+      "description": "The third day dawned with the energy of those who know the time has come to give shape to ideas. Teams organized to consolidate the structure into three fundamental blocks: an integral registry that allows centralizing information, a maintenance calendar to plan community tasks, and a documentary repository that preserves the knowledge of neighbors.\n\nThe code was beginning to become a real tool, with clear direction both in the application and in the future public website. But not everything was lines of code. This day was decisive for the project's identity: work was done on creating the brand image and the first visual sketches of the application.\n\nMiguel, Emma and Jesus, from the User Experience team, guided this process with the mission that the tool be intuitive and easy to use for anyone. Because, beyond technology, the goal has always been the same: that villages have useful, clear solutions designed for their daily life.",
+      "image": "/images/progress/day-3.jpg",
+      "imageAlt": "UX team: Miguel, Emma and Jesus",
+      "highlights": [
+        "Definition of structure in 3 blocks",
+        "Base code development",
+        "Visual identity creation",
+        "User experience design"
+      ],
+      "participants": 25,
+      "mood": "creative"
+    },
+    {
+      "id": "day-4",
+      "day": 4,
+      "date": "2025-09-03",
+      "title": "Day 4: The website rises and the story begins to travel",
+      "description": "The fourth day brought the excitement of seeing how the pieces begin to fit together. The day was focused on shaping the project's public website, conceived as the bridge between technology and neighbors, with the clear objective of giving visibility to the tool, explaining its functionalities and who is the team behind its creation.\n\nBut the day didn't stay only in lines of code and screens under construction. The project also began to make itself heard outside Anceu, awakening the interest of those who look at rural areas with curiosity and hope. From the communication team, the first conversations with media were opened, and soon the stories of this project that already had a name \"Punto de Agua\" began to travel beyond its limits.\n\nLa cadena ser, Galicia Press, Corresponsables, Marketing Directo, Marketing4eCommerce, Vivaces... were the first to pick up the news. What until yesterday was a local effort begins to resonate as a seed of change for many other territories. To coordinate this essential work of visibility is part of the communication team: Ana and Pablo, who together are creating a documentary of everything that is happening during the hacker days and Pablo creating a Podcast.",
+      "image": "/images/progress/day-4.jpg",
+      "imageAlt": "Communication team: Ana and Pablo",
+      "highlights": [
+        "Public website development",
+        "First media coverage",
+        "Documentary and podcast creation",
+        "Project impact expansion"
+      ],
+      "participants": 25,
+      "mood": "optimistic"
+    },
+    {
+      "id": "day-5",
+      "day": 5,
+      "date": "2025-09-04",
+      "title": "Day 5: From prototype to tool",
+      "description": "The fifth day marked a before and after in Hacker Days: the idea began to become a tool. After days of conversations, prototypes and first tests, the web and mobile application saw the light as the technological seed that will transform community water management.\n\nThe path was not without challenges, the project's ambition exceeded what a single week could encompass, and it soon became evident that decisions had to be made with agility. Together, as a true team, we prioritized the essential functionalities that had to be ready and operational from day one, leaving other promising ideas well on track to grow in the future.\n\nThis focus exercise was not a limit, but an impulse: it allowed the application to be born with a solid base and ready to use. To ensure that this tool not only works, but is robust and useful for villages, was the rest of the development team: César, Miguel Ángel and Víctor.",
+      "image": "/images/progress/day-5.jpg",
+      "imageAlt": "Development team: César, Miguel Ángel and Víctor",
+      "highlights": [
+        "Web and mobile application launch",
+        "Essential functionalities prioritization",
+        "Solid base development",
+        "Preparation for real use"
+      ],
+      "participants": 25,
+      "mood": "productive"
+    },
+    {
+      "id": "day-6",
+      "day": 6,
+      "date": "2025-09-05",
+      "title": "Day 6: Last day; sow innovation in every rural corner",
+      "description": "The last day arrived loaded with intensity and energy. In the heart of Anceu, the technical department was completely focused, coding tirelessly to leave everything ready and operational. Meanwhile, the marketing team closed the final details of the website, ensuring that the story of hacker days and Punto de Agua reaches every possible corner.\n\nThe goal was not just to present a finished project, but to leave a living legacy: a solid base with open source code so it can be replicated in all villages that find themselves in the same situation. For this message to reach every corner where it was needed, we had Juanma, Laura and Pablo, part of the marketing team, who with enthusiasm and commitment took charge of amplifying the project's impact through social networks.\n\nThanks to their work, Anceu's innovation doesn't stay in the village; it travels, inspires and sows possibilities throughout the region.",
+      "image": "/images/progress/day-6.jpg",
+      "imageAlt": "Marketing team: Juanma, Laura and Pablo",
+      "highlights": [
+        "Technical project completion",
+        "Open source code preparation",
+        "Digital marketing strategy",
+        "Impact amplification"
+      ],
+      "participants": 25,
+      "mood": "triumphant"
+    },
+    {
+      "id": "day-7",
+      "day": 7,
+      "date": "2025-09-06",
+      "title": "Day 7: The App Presentation in the Village",
+      "description": "The last day of Hacker Days culminated with the official presentation of the application in the village of Anceu. This moment was the tangible demonstration of how technology can serve the real needs of rural areas.\n\nThe application, designed to replace manual processes with total digitalization, will ensure the continuity of the water system without depending on the individual memory of a few people. It seeks to save time for those who maintain the system and avoid water waste.\n\nWith this tool, Rural Hackers and its collaborators (TEIMAS, SiteGround, VIKO, ElevenYellow Pte. Ltd., NEXT DIGITAL, AdoptaUnJunior and Anceu Coliving) demonstrated their commitment to improving the quality of life in rural territories, fostering open technological solutions, driven from below and centered on communities. The Anceu project is a collaboration model where technology is put at the service of local needs for real social impact.",
+      "image": "/images/progress/day-7.jpg",
+      "imageAlt": "Official presentation of Punto de Agua in Anceu",
+      "highlights": [
+        "Official presentation in Anceu",
+        "Application demonstration",
+        "Commitment to rural areas",
+        "Replicable collaboration model"
+      ],
+      "participants": 30,
+      "mood": "triumphant"
+    }
+  ]
+}

@@ -1,0 +1,215 @@
+---
+import type { Locale, Translations } from '../utils/i18n';
+import LanguageDropdown from './LanguageDropdown.astro';
+
+interface ProgressUpdate {
+  id: string;
+  day: number;
+  date: string;
+  title: string;
+  description: string;
+  image: string;
+  imageAlt: string;
+  highlights: string[];
+  participants: number;
+  mood: string;
+}
+
+interface Props {
+  locale: Locale;
+  translations: Translations;
+  update: ProgressUpdate;
+  currentPath: string;
+  allUpdates: ProgressUpdate[];
+}
+
+const { locale, translations, update, currentPath, allUpdates } = Astro.props;
+
+// Función para formatear la fecha
+const formatDate = (dateString: string) => {
+  const date = new Date(dateString);
+  return date.toLocaleDateString(locale === 'es' ? 'es-ES' : locale === 'gl' ? 'gl-ES' : 'en-US', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric'
+  });
+};
+
+// Función para obtener el estado de ánimo en emoji
+const getMoodEmoji = (mood: string) => {
+  const moodMap: Record<string, string> = {
+    'emocionado': '😊',
+    'excited': '😊',
+    'concentrado': '🤔',
+    'focused': '🤔',
+    'creativo': '💡',
+    'creative': '💡',
+    'produtivo': '⚡',
+    'productive': '⚡',
+    'optimista': '😌',
+    'optimistic': '😌',
+    'triunfante': '🏆',
+    'triumphant': '🏆'
+  };
+  return moodMap[mood] || '😊';
+};
+
+// Encontrar el día anterior y siguiente
+const currentIndex = allUpdates.findIndex(u => u.id === update.id);
+const previousUpdate = currentIndex > 0 ? allUpdates[currentIndex - 1] : null;
+const nextUpdate = currentIndex < allUpdates.length - 1 ? allUpdates[currentIndex + 1] : null;
+---
+
+<section id="progress-detail" class="py-16 md:py-24 bg-gradient-to-b from-white to-gray-50" role="main" aria-labelledby="detail-title">
+  <div class="container px-4 md:px-6">
+    <!-- Header -->
+    <div class="text-center mb-12">
+      <div class="flex justify-center mb-4">
+        <LanguageDropdown currentPath={currentPath} />
+      </div>
+      
+      <!-- Navigation -->
+      <div class="flex items-center justify-between max-w-4xl mx-auto mb-8">
+        <a
+          href={`/${locale}/progress`}
+          class="inline-flex items-center gap-2 px-4 py-2 text-earth-600 hover:text-earth-800 transition-colors duration-200"
+        >
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+          </svg>
+          Volver al resumen
+        </a>
+        
+        <div class="flex items-center gap-4">
+          {previousUpdate && (
+            <a
+              href={`/${locale}/progress/day-${previousUpdate.day}`}
+              class="inline-flex items-center gap-2 px-4 py-2 bg-earth-100 hover:bg-earth-200 text-earth-800 rounded-md transition-colors duration-200"
+            >
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+              </svg>
+              Día {previousUpdate.day}
+            </a>
+          )}
+          
+          {nextUpdate && (
+            <a
+              href={`/${locale}/progress/day-${nextUpdate.day}`}
+              class="inline-flex items-center gap-2 px-4 py-2 bg-earth-800 hover:bg-earth-900 text-white rounded-md transition-colors duration-200"
+            >
+              Día {nextUpdate.day}
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+              </svg>
+            </a>
+          )}
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <article class="max-w-4xl mx-auto">
+      <!-- Day Badge -->
+      <div class="text-center mb-8">
+        <span class="inline-block bg-earth-800 text-white px-6 py-2 rounded-full text-lg font-medium">
+          Día {update.day}
+        </span>
+        <p class="text-earth-600 mt-2">
+          {formatDate(update.date)}
+        </p>
+      </div>
+
+      <!-- Title -->
+      <h1 id="detail-title" class="text-3xl md:text-4xl font-bold text-earth-900 mb-8 text-center">
+        {update.title}
+      </h1>
+
+      <!-- Image -->
+      <div class="mb-8">
+        <img
+          src={update.image}
+          alt={update.imageAlt}
+          class="w-full h-64 md:h-96 object-cover rounded-xl shadow-lg"
+          loading="lazy"
+        />
+        <p class="text-sm text-earth-600 mt-2 text-center italic">
+          {update.imageAlt}
+        </p>
+      </div>
+
+      <!-- Stats -->
+      <div class="flex items-center justify-center gap-8 mb-8 p-6 bg-white rounded-xl shadow-sm">
+        <div class="text-center">
+          <div class="text-2xl font-bold text-earth-800">{update.participants}</div>
+          <div class="text-sm text-earth-600">Participantes</div>
+        </div>
+        <div class="text-center">
+          <div class="text-2xl">{getMoodEmoji(update.mood)}</div>
+          <div class="text-sm text-earth-600 capitalize">{update.mood}</div>
+        </div>
+      </div>
+
+      <!-- Description -->
+      <div class="prose prose-lg max-w-none mb-8">
+        <div class="text-earth-700 leading-relaxed whitespace-pre-line">
+          {update.description}
+        </div>
+      </div>
+
+      <!-- Highlights -->
+      <div class="bg-white rounded-xl shadow-sm p-6 mb-8">
+        <h3 class="text-xl font-semibold text-earth-900 mb-4">
+          Momentos destacados
+        </h3>
+        <ul class="space-y-3">
+          {update.highlights.map((highlight, index) => (
+            <li class="flex items-start gap-3">
+              <span class="flex-shrink-0 w-6 h-6 bg-earth-100 text-earth-800 rounded-full flex items-center justify-center text-sm font-medium">
+                {index + 1}
+              </span>
+              <span class="text-earth-700">{highlight}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <!-- Navigation at bottom -->
+      <div class="flex items-center justify-between pt-8 border-t border-earth-200">
+        {previousUpdate ? (
+          <a
+            href={`/${locale}/progress/day-${previousUpdate.day}`}
+            class="inline-flex items-center gap-2 px-6 py-3 bg-earth-100 hover:bg-earth-200 text-earth-800 rounded-lg transition-colors duration-200"
+          >
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+            </svg>
+            Día {previousUpdate.day}: {previousUpdate.title}
+          </a>
+        ) : (
+          <div></div>
+        )}
+        
+        {nextUpdate && (
+          <a
+            href={`/${locale}/progress/day-${nextUpdate.day}`}
+            class="inline-flex items-center gap-2 px-6 py-3 bg-earth-800 hover:bg-earth-900 text-white rounded-lg transition-colors duration-200"
+          >
+            Día {nextUpdate.day}: {nextUpdate.title}
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+          </a>
+        )}
+      </div>
+    </article>
+  </div>
+</section>
+
+<style>
+  .transition-colors {
+    transition-property: color, background-color, border-color;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 200ms;
+  }
+</style>

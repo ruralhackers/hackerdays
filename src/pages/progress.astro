@@ -1,0 +1,26 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ProgressOverview from '../components/ProgressOverview.astro';
+import { loadTranslations, getLocaleFromPath, type Locale } from '../utils/i18n';
+
+// Obtener el idioma por defecto
+const locale = getLocaleFromPath(Astro.url.pathname) as Locale;
+const translations = await loadTranslations(locale);
+
+// Cargar las actualizaciones de progreso
+const progressData = await import(`../data/progress-updates-${locale}.json`);
+const updates = progressData.default.updates;
+---
+
+<Layout 
+  title="Actualizaciones de Progreso - Hacker Days"
+  description="Sigue el avance día a día del hackathon sobre gestión del agua en Anceu, Galicia"
+  lang={locale}
+>
+  <ProgressOverview 
+    locale={locale}
+    translations={translations}
+    updates={updates}
+    currentPath={Astro.url.pathname}
+  />
+</Layout>

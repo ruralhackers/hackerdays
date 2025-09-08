@@ -1,0 +1,123 @@
+{
+  "updates": [
+    {
+      "id": "day-1",
+      "day": 1,
+      "date": "2025-08-31",
+      "title": "Día 1: O rural galego como epicentro do cambio dixital",
+      "description": "O primeiro día dos Hacker Days arrancou coa emoción de quen saben que algo importante está por comezar. Os participantes chegaron a Anceu, un pequeno pobo galego de só 97 habitantes, convertido estes días no centro dunha aventura colectiva que une tecnoloxía e territorio.\n\nAlí os recibiu o equipo humano de Rural Hackers, que impulsou este evento co obxectivo de conectar entidades tecnolóxicas con comunidades rurais para deseñar solucións dixitais. Nacho, África, Agustín e Noelia deron a benvida a todos os participantes, asegurándose de que cada detalle estivese listo para unha semana de convivencia e creación.\n\nFoi unha xornada de aterrizaxe, de primeiras charlas, de mirar arredor e sentir que este entorno rural ten moito que dicir e que aportar. Durante os próximos sete días, este recuncho de Galicia será o lugar onde persoas diversas imaxinarán, deseñarán e construírán solucións dixitais pensadas para os veciños que máis as necesitan. E isto só é o comezo.",
+      "image": "/images/progress/day-1.jpg",
+      "imageAlt": "Equipo de Rural Hackers: África, Agus, Noe e Nacho",
+      "highlights": [
+        "Chegada de participantes a Anceu (97 habitantes)",
+        "Benvida do equipo de Rural Hackers",
+        "Primeiras charlas e presentacións",
+        "Toma de contacto co entorno rural galego"
+      ],
+      "participants": 20,
+      "mood": "emocionado"
+    },
+    {
+      "id": "day-2",
+      "day": 2,
+      "date": "2025-09-01",
+      "title": "Día 2: Anceu como punto de partida, o rural como destino",
+      "description": "O segundo día comezou cunha mestura de curiosidade e compromiso. Xa integrados, os participantes escoitaron con atención a presentación do gran reto que marcará esta edición dos Hacker Days: transformar a xestión da auga nas zonas rurais. Púxose sobre a mesa unha realidade que moitas veces pasa desapercibida, pero que é vital para a vida nos pobos.\n\nO prototipo basearase en Anceu, onde Rosabel e Olga dedican, de forma voluntaria, preto de 400 horas ao ano a manter en funcionamento o sistema de auga: ler contadores, supervisar o depósito, rexistrar as medicións a man... Un traballo silencioso e esencial que se enfronta a un futuro incierto, xa que a falta de relevo xeracional e a dependencia do coñecemento de certos veciños fan que este modelo sexa fráxil.\n\nPor iso, o obxectivo desta semana quedou claro: deseñar de forma colaborativa, unha ferramenta dixital, aberta e gratuita que facilite esta labor comunitaria. Así comezou a fase de creación, coas primeiras ideas cobrando vida. Un grupo de vinte expertos en tecnoloxía, deseño e comunicación (xunto a cinco nenos) preparouse para \"picar código e facer maxia\" durante os días que estaban por vir. Con Orlando, Chema e Carol desde o equipo tech, as ideas comezaron a tomar forma, encamiñadas a converterse en ferramentas reais para o día a día dos pobos.",
+      "image": "/images/progress/day-2.jpg",
+      "imageAlt": "Equipo tech: Orlando, Chema e Carol",
+      "highlights": [
+        "Presentación do reto: xestión da auga rural",
+        "Coñecemento do traballo de Rosabel e Olga (400h/ano)",
+        "Inicio da fase de creación",
+        "Formación de equipos multidisciplinares"
+      ],
+      "participants": 25,
+      "mood": "concentrado"
+    },
+    {
+      "id": "day-3",
+      "day": 3,
+      "date": "2025-09-02",
+      "title": "Día 3: Debuxando o futuro da auga nos pobos",
+      "description": "O terceiro día amenceu coa enerxía de quen saben que chega o momento de dar forma ás ideas. Os equipos organizáronse para consolidar a estrutura en tres bloques fundamentais: un rexistro integral que permita centralizar a información, un calendario de mantemento para planificar as tarefas comunitarias e un repositorio documental que preserve o coñecemento dos veciños.\n\nO código empezaba a converterse nunha ferramenta real, con rumbo claro tanto na aplicación como na futura web pública. Pero non todo foron liñas de código. Este día resultou decisivo para a identidade do proxecto: traballouse na creación da imaxe de marca e nos primeiros bocetos visuais da aplicación.\n\nMiguel, Emma e Jesus, desde o equipo de Experiencia de Usuario, guiaron este proceso coa misión de que a ferramenta sexa intuitiva e fácil de usar para calquera. Porque, máis alá da tecnoloxía, a meta sempre foi a mesma: que os pobos conten con solucións útiles, claras e pensadas para o seu día a día.",
+      "image": "/images/progress/day-3.jpg",
+      "imageAlt": "Equipo UX: Miguel, Emma e Jesus",
+      "highlights": [
+        "Definición de estrutura en 3 bloques",
+        "Desenvolvemento do código base",
+        "Creación de identidade visual",
+        "Deseño de experiencia de usuario"
+      ],
+      "participants": 25,
+      "mood": "creativo"
+    },
+    {
+      "id": "day-4",
+      "day": 4,
+      "date": "2025-09-03",
+      "title": "Día 4: A web levántase e a historia comeza a viaxar",
+      "description": "O cuarto día trouxo consigo a emoción de ver como as pezas comezan a encaixar. A xornada estivo centrada en dar forma á web pública do proxecto, pensada como a ponte entre a tecnoloxía e os veciños, co claro obxectivo de dar visibilidade á ferramenta, explicar as súas funcionalidades e quen é o equipo que estivo detrás da súa creación.\n\nPero o día non se quedou só en liñas de código e pantallas en construción. O proxecto comezou tamén a facerse oír fóra de Anceu, despertando o interese de quen miran ao rural con curiosidade e esperanza. Desde o equipo de comunicación abríronse as primeiras conversas con medios, e pronto as historias deste proxecto que xa tiña nome \"Punto de Agua\" empezaron a viaxar máis alá dos seus límites.\n\nA cadea ser, Galicia Press, Corresponsables, Marketing Directo, Marketing4eCommerce, Vivaces... foron os primeiros en recoller a noticia. O que ata onte era un esforzo local empeza a resonar como unha semente de cambio para moitos outros territorios. Para coordinar esta labor esencial de visibilización está parte do equipo de comunicación: Ana e Pablo, que xuntos están creando un documental de todo o que está sucedendo durante os hacker days e Pablo creando un Podcast.",
+      "image": "/images/progress/day-4.jpg",
+      "imageAlt": "Equipo de comunicación: Ana e Pablo",
+      "highlights": [
+        "Desenvolvemento da web pública",
+        "Primeiras coberturas mediáticas",
+        "Creación de documental e podcast",
+        "Expansión do impacto do proxecto"
+      ],
+      "participants": 25,
+      "mood": "optimista"
+    },
+    {
+      "id": "day-5",
+      "day": 5,
+      "date": "2025-09-04",
+      "title": "Día 5: Do prototipo á ferramenta",
+      "description": "O quinto día marcou un antes e un despois nos Hacker Days: a idea empezou a converterse en ferramenta. Tras xornadas de conversas, prototipos e primeiras probas, a aplicación web e móbil viu a luz como a semente tecnolóxica que transformará a xestión comunitaria da auga.\n\nO camiño non estivo exento de desafíos, a ambición do proxecto superaba o que unha soa semana podía abarcar, e pronto fixose evidente que había que tomar decisións con axilidade. Xuntos, como un verdadeiro equipo, priorizamos as funcionalidades esenciais que debían estar listas e operativas desde o primeiro día, deixando outras ideas prometedoras ben encamiñadas para crecer no futuro.\n\nEste exercicio de enfoque non foi un límite, senón un impulso: permitiu que a aplicación nacera cunha base sólida e lista para usar. Para asegurar que esta ferramenta non só funcione, senón que sexa robusta e útil para os pobos, estaba o resto do equipo de desenvolvemento: César, Miguel Ángel e Víctor.",
+      "image": "/images/progress/day-5.jpg",
+      "imageAlt": "Equipo de desenvolvemento: César, Miguel Ángel e Víctor",
+      "highlights": [
+        "Lanzamento da aplicación web e móbil",
+        "Priorización de funcionalidades esenciais",
+        "Desenvolvemento de base sólida",
+        "Preparación para uso real"
+      ],
+      "participants": 25,
+      "mood": "produtivo"
+    },
+    {
+      "id": "day-6",
+      "day": 6,
+      "date": "2025-09-05",
+      "title": "Día 6: Último día; sementar innovación en cada recuncho rural",
+      "description": "O último día chegou cargado de intensidade e enerxía. No corazón de Anceu, o departamento técnico estaba completamente concentrado, picando código sen descanso para deixar todo listo e operativo. Mentres tanto, o equipo de marketing pechaba os últimos detalles da web, asegurándose de que a historia dos hackers days e Punto de Agua chegará a todos os recunchos posibles.\n\nA meta non era só presentar un proxecto terminado, senón deixar un legado vivo: unha base sólida con código aberto para que se poida replicar en todos os pobos que se atopen na mesma situación. Para que esta mensaxe chegue a todos os recunchos onde fixera falla, contamos con Juanma, Laura e Pablo, parte do equipo de marketing, quen con entusiasmo e compromiso encargáronse de amplificar o impacto do proxecto a través das redes.\n\nGrazas ao seu traballo, a innovación de Anceu non se queda no pobo; viaxa, inspira e sementa posibilidades en toda a rexión.",
+      "image": "/images/progress/day-6.jpg",
+      "imageAlt": "Equipo de marketing: Juanma, Laura e Pablo",
+      "highlights": [
+        "Finalización técnica do proxecto",
+        "Preparación de código aberto",
+        "Estratexia de marketing dixital",
+        "Amplificación do impacto"
+      ],
+      "participants": 25,
+      "mood": "triunfante"
+    },
+    {
+      "id": "day-7",
+      "day": 7,
+      "date": "2025-09-06",
+      "title": "Día 7: A Presentación no Pobo da App",
+      "description": "O último día dos Hacker Days culminou coa presentación oficial da aplicación no pobo de Anceu. Este momento foi a demostración tanxible de como a tecnoloxía pode servir ás necesidades reais do rural.\n\nA aplicación, deseñada para substituír os procesos manuais por unha dixitalización total, garantirá a continuidade do sistema de auga sen depender da memoria individual de unhas poucas persoas. Búscase aforrar tempo a quen sosteñen o sistema e evitar o desperdicio de auga.\n\nCon esta ferramenta, Rural Hackers e os seus colaboradores (TEIMAS, SiteGround, VIKO, ElevenYellow Pte. Ltd., NEXT DIGITAL, AdoptaUnJunior e Anceu Coliving) demostraron o seu compromiso coa mellora da calidade de vida nos territorios rurais, fomentando solucións tecnolóxicas abertas, impulsadas desde abaixo e centradas nas comunidades. O proxecto de Anceu é un modelo de colaboración onde a tecnoloxía ponse ao servizo das necesidades locais para un impacto social real.",
+      "image": "/images/progress/day-7.jpg",
+      "imageAlt": "Presentación oficial de Punto de Agua en Anceu",
+      "highlights": [
+        "Presentación oficial en Anceu",
+        "Demostración da aplicación",
+        "Compromiso co rural",
+        "Modelo de colaboración replicable"
+      ],
+      "participants": 30,
+      "mood": "triunfante"
+    }
+  ]
+}
