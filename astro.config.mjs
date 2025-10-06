@@ -1,7 +1,7 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
 import tailwind from '@astrojs/tailwind';
-import node from '@astrojs/netlify';
+// import node from '@astrojs/netlify';
 
 // https://astro.build/config
 export default defineConfig({
@@ -11,8 +11,8 @@ export default defineConfig({
     locales: ["es", "gl", "en"],
     defaultLocale: "es",
   },
-  output: 'server',
-  adapter: node({
-    includeFiles: ['public/locales/**/*'],
-  }),
+  output: 'static',
+  // adapter: node({
+  //   includeFiles: ['public/locales/**/*'],
+  // }),
 });
